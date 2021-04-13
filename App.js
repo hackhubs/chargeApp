@@ -5,12 +5,14 @@ import HomePageScreen from "./screens/HomePageScreen";
 import CardScreen from "./components/CardScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./navigation/AppNavigator";
+import OnBoardingScreen from "./screens/OnBoardingScreen";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <AppNavigator />
-    </NavigationContainer>
+    <HomePageScreen />
+    // <NavigationContainer>
+    //   <AppNavigator />
+    // </NavigationContainer>
   );
 }
 

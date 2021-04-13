@@ -15,35 +15,39 @@ import { Searchbar } from "react-native-paper";
 import { Feather } from "@expo/vector-icons";
 import { Card, Button, Icon } from "react-native-elements";
 import CardScreen from "../components/CardScreen";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const details = [
   {
     id: "1",
-    status: "available",
+    status: "Available",
     dis: "1.3",
     loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
   {
     id: "2",
-    status: "available",
-    dis: "1.3",
+    status: "Available",
+    dis: "12.4",
     loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
   {
     id: "3",
-    status: "available",
+    status: "Available",
     dis: "1.3",
     loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
 ];
 
-const App = () => {
+const HomePageScreen = () => {
   return (
     <ScrollView>
       <SafeAreaView style={styles.cont}>
         <View>
           <ImageBackground
-            source={require("../images/charge.png")}
+            source={require("../images/chargeScreen1.png")}
             style={{ width: "100%", height: 150 }}
             resizeMode="cover"
           >
@@ -62,14 +66,12 @@ const App = () => {
                 style={{
                   fontSize: 28,
                   color: "white",
-                  marginLeft: -100,
-                  marginBottom: 5,
+                  marginLeft: -180,
+                  marginBottom: 80,
+                  fontWeight: "bold",
                 }}
               >
                 Hello Moksh,
-              </Text>
-              <Text style={{ fontSize: 14, color: "white", marginLeft: -100 }}>
-                Let's Charge your Vehicle
               </Text>
             </View>
           </ImageBackground>
@@ -83,8 +85,9 @@ const App = () => {
         >
           <Searchbar
             placeholder="Search for Charging Ports"
-            icon={<Feather name="search" size={40} color="black" />}
-            iconColor="black"
+            icon={<Feather name="search" size={40} color="#D2D2D2" />}
+            iconColor="#D2D2D2"
+            style={{ borderRadius: 25 }}
           />
         </View>
         <View>
@@ -157,7 +160,6 @@ const App = () => {
     </ScrollView>
   );
 };
-export default App;
 
 const styles = StyleSheet.create({
   cont: {
@@ -172,3 +174,5 @@ const styles = StyleSheet.create({
     color: "#34495e",
   },
 });
+
+export default HomePageScreen;
