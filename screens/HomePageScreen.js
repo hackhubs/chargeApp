@@ -19,6 +19,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import RecentCard from "../components/RecentCard";
 
 const details = [
   {
@@ -37,6 +38,27 @@ const details = [
     id: "3",
     status: "Available",
     dis: "1.3",
+    loc: "Rohini Community Charging Station,..",
+  },
+];
+
+const recentDetails = [
+  {
+    id: "1",
+    days: "3",
+    dis: "1.3",
+    loc: "Rohini Community Charging Station,....",
+  },
+  {
+    id: "2",
+    days: "3",
+    dis: "12.4",
+    loc: "Rohini Community Charging Station,...",
+  },
+  {
+    id: "3",
+    days: "3",
+    dis: "1.3",
     loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
 ];
@@ -48,7 +70,7 @@ const HomePageScreen = () => {
         <View>
           <ImageBackground
             source={require("../images/chargeScreen1.png")}
-            style={{ width: "100%", height: 150 }}
+            style={{ width: wp("100%"), height: hp("20%") }}
             resizeMode="cover"
           >
             <View
@@ -66,8 +88,8 @@ const HomePageScreen = () => {
                 style={{
                   fontSize: 28,
                   color: "white",
-                  marginLeft: -180,
-                  marginBottom: 80,
+                  marginRight: wp("47%"),
+                  marginBottom: wp("20%"),
                   fontWeight: "bold",
                 }}
               >
@@ -78,7 +100,7 @@ const HomePageScreen = () => {
         </View>
         <View
           style={{
-            marginTop: -40,
+            marginTop: -50,
             marginLeft: 10,
             marginRight: 10,
           }}
@@ -95,8 +117,8 @@ const HomePageScreen = () => {
             <Image
               source={require("../images/host.png")}
               style={{
-                width: "70%",
-                height: 80,
+                width: wp("70%"),
+                height: hp("10%"),
                 marginLeft: 60,
                 marginTop: 20,
               }}
@@ -143,15 +165,11 @@ const HomePageScreen = () => {
           </Text>
           <ScrollView>
             <FlatList
-              data={details}
+              data={recentDetails}
               keyExtractor={(details) => details.id}
               horizontal={true}
               renderItem={({ item }) => (
-                <CardScreen
-                  status={item.status}
-                  dis={item.dis}
-                  loc={item.loc}
-                />
+                <RecentCard days={item.days} dis={item.dis} loc={item.loc} />
               )}
             />
           </ScrollView>
@@ -164,7 +182,8 @@ const HomePageScreen = () => {
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
-    marginBottom: 50,
+    // marginBottom: 50,
+    backgroundColor: "white",
   },
   paragraph: {
     margin: 24,

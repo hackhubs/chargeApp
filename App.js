@@ -6,10 +6,11 @@ import CardScreen from "./components/CardScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./navigation/AppNavigator";
 import OnBoardingScreen from "./screens/OnBoardingScreen";
+import ChargingDetails from "./screens/ChargingDetails";
 
 export default function App() {
   return (
-    <HomePageScreen />
+    <ChargingDetails />
     // <NavigationContainer>
     //   <AppNavigator />
     // </NavigationContainer>
