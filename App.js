@@ -7,10 +7,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./navigation/AppNavigator";
 import OnBoardingScreen from "./screens/OnBoardingScreen";
 import ChargingDetails from "./screens/ChargingDetails";
+import SignupScreen from "./screens/SignupScreen";
+import SignupOTP from "./screens/SignupOTP";
 
 export default function App() {
   return (
-    <ChargingDetails />
+    <SignupScreen />
     // <NavigationContainer>
     //   <AppNavigator />
     // </NavigationContainer>

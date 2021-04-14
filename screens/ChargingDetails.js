@@ -78,7 +78,7 @@ function ChargingDetails(props) {
                 Energy
               </Text>
               <Text style={{ fontSize: wp("3.5%"), color: "white" }}>
-                consumed
+                Consumed
               </Text>
             </View>
           </View>
