@@ -1,19 +1,10 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from "react";
-import {
-  StyleSheet,
-  Image,
-  View,
-  Text,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
+import { StyleSheet, Image, View, TouchableHighlight } from "react-native";
 import Onboarding from "react-native-onboarding-swiper";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-// import Poppins from '../../android/app/src/main/assets/fonts/Poppins/Poppins-SemiBold.ttf';
 
 const dots = ({ selected }) => {
   let backgroundColor;
@@ -34,14 +25,11 @@ const dots = ({ selected }) => {
 };
 
 const Next = ({ ...props }) => (
-  <TouchableOpacity style={styles.next} {...props}>
-    <Image
-      source={require("../images/next.png")}
-      style={{ height: hp("6%"), width: wp("30%") }}
-    />
-  </TouchableOpacity>
+  <TouchableHighlight style={styles.next} {...props}>
+    <Image source={require("../images/next.png")} style={styles.nextImage} />
+  </TouchableHighlight>
 );
-function OnBoardingScreen({ navigation }) {
+function OnBoardingScreen2({ navigation }) {
   return (
     <View style={styles.container}>
       <Onboarding
@@ -49,12 +37,7 @@ function OnBoardingScreen({ navigation }) {
         showSkip={false}
         bottomBarHighlight={false}
         NextButtonComponent={Next}
-        titleStyles={{
-          fontSize: 30,
-          fontWeight: "bold",
-          bottom: 190,
-          fontFamily: "Poppins-SemiBold",
-        }}
+        titleStyles={{ fontSize: 30, fontWeight: "bold", bottom: 200 }} // set default color for the title
         onDone={() => navigation.replace("LoginPage")}
         pages={[
           {
@@ -109,24 +92,19 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   next: {
-    marginBottom: 100,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#069DFF",
-    marginRight: 40,
-    borderRadius: hp("7%") / 6,
+    marginBottom: 70,
     width: wp("80%"),
-    height: hp("7%"),
+    marginRight: 30,
   },
-  txt: {
-    fontSize: 20,
-    color: "white",
+  nextImage: {
+    width: wp("80%"),
+    height: hp("8%"),
   },
   image: {
     width: wp("100%"),
     height: hp("50%"),
-    marginBottom: 150,
+    marginBottom: 140,
   },
 });
 
-export default OnBoardingScreen;
+export default OnBoardingScreen2;

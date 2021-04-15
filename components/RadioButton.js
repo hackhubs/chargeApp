@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 
 export default class RadioButton extends Component {
@@ -36,31 +40,31 @@ export default class RadioButton extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 30,
+    marginLeft: wp("5%"),
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "flex-start",
-    marginTop: 10,
+    marginTop: wp("3%"),
   },
   radioText: {
-    marginRight: 30,
-    fontSize: 20,
-    marginLeft: 20,
+    marginRight: wp("4%"),
+    fontSize: wp("5%"),
+    marginLeft: wp("5%"),
     color: "#031925",
   },
   radioCircle: {
-    height: 30,
-    width: 30,
-    borderRadius: 100,
+    height: hp("4%"),
+    width: wp("6.5%"),
+    borderRadius: wp("6%") / 2,
     borderWidth: 2,
     borderColor: "#9F9F9F",
     alignItems: "center",
     justifyContent: "center",
   },
   selectedRb: {
-    width: 15,
-    height: 15,
-    borderRadius: 50,
+    width: wp("3%"),
+    height: hp("2%"),
+    borderRadius: wp("3%") / 2,
     backgroundColor: "#28A7EB",
     borderColor: "#28A7EB",
   },

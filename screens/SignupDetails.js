@@ -1,5 +1,12 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, TextInput } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -24,7 +31,7 @@ function SignupDetails(props) {
         style={{ width: wp("60%"), height: hp("10%"), marginLeft: wp("10%") }}
       />
       <View style={{ marginTop: wp("8%"), marginLeft: wp("10%") }}>
-        <Text style={{ fontSize: wp("5%"), color: "#7C7C7C" }}>Username</Text>
+        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>Username</Text>
         <TextInput
           placeholder="Enter Name"
           style={{
@@ -37,7 +44,7 @@ function SignupDetails(props) {
       </View>
 
       <View style={{ marginTop: wp("4%"), marginLeft: wp("10%") }}>
-        <Text style={{ fontSize: wp("5%"), color: "#7C7C7C" }}>Email</Text>
+        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>Email</Text>
         <TextInput
           placeholder="Enter Email Address"
           style={{
@@ -52,7 +59,8 @@ function SignupDetails(props) {
         style={{
           marginTop: wp("6%"),
           marginLeft: wp("10%"),
-          fontSize: wp("3.6%"),
+          fontSize: wp("3.3%"),
+          marginRight: wp("3%"),
           color: "#7C7C7C",
         }}
       >
@@ -60,11 +68,13 @@ function SignupDetails(props) {
         <Text style={{ color: "#069DFF" }}>Terms of Service </Text>
         and <Text style={{ color: "#069DFF" }}>Privacy Policy.</Text>
       </Text>
-      <Image
-        source={require("../images/signupBtn.png")}
-        resizeMode="contain"
-        style={{ width: wp("60%"), height: hp("18%"), marginLeft: wp("20%") }}
-      />
+      <TouchableOpacity activeOpacity={0.6}>
+        <Image
+          source={require("../images/signupBtn.png")}
+          resizeMode="contain"
+          style={{ width: wp("60%"), height: hp("18%"), marginLeft: wp("20%") }}
+        />
+      </TouchableOpacity>
     </View>
   );
 }

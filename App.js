@@ -10,10 +10,11 @@ import ChargingDetails from "./screens/ChargingDetails";
 import SignupScreen from "./screens/SignupScreen";
 import SignupOTP from "./screens/SignupOTP";
 import SignupDetails from "./screens/SignupDetails";
+import ProfileScreen from "./screens/ProfileScreen";
 
 export default function App() {
   return (
-    <SignupDetails />
+    <ProfileScreen />
     // <NavigationContainer>
     //   <AppNavigator />
     // </NavigationContainer>
