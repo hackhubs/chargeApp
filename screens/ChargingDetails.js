@@ -206,6 +206,7 @@ function ChargingDetails(props) {
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
+    backgroundColor: "white",
   },
   box1: {
     backgroundColor: "#03AD70",

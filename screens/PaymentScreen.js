@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,10 +7,11 @@ import {
   Text,
   Image,
   ScrollView,
+  TouchableOpacity,
   ImageBackground,
 } from "react-native";
 
-const App = () => {
+const PaymentScreen = () => {
   return (
     <ScrollView>
       <SafeAreaView style={styles.cont}>
@@ -68,7 +68,8 @@ const App = () => {
             <Text style={styles.charge2}>ON</Text>
           </View>
         </View>
-        <View>
+
+        {/* <View>
           <Text
             style={{
               fontSize: 18,
@@ -84,16 +85,17 @@ const App = () => {
             style={{ width: "90%", height: 150, marginLeft: 20, marginTop: 10 }}
             resizeMode="cover"
           />
-        </View>
+        </View> */}
       </SafeAreaView>
     </ScrollView>
   );
 };
-export default App;
+export default PaymentScreen;
 
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
+    backgroundColor: "white",
   },
   text: {
     fontSize: 20,

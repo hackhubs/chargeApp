@@ -11,13 +11,15 @@ import SignupScreen from "./screens/SignupScreen";
 import SignupOTP from "./screens/SignupOTP";
 import SignupDetails from "./screens/SignupDetails";
 import ProfileScreen from "./screens/ProfileScreen";
+import TestScreen from "./screens/TestScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 export default function App() {
   return (
-    <ProfileScreen />
-    // <NavigationContainer>
-    //   <AppNavigator />
-    // </NavigationContainer>
+    // <PaymentScreen />
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 

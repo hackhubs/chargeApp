@@ -16,7 +16,7 @@ import {
 
 function ProfileScreen(props) {
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <SafeAreaView style={styles.container}>
         <View>
           <ImageBackground
@@ -165,6 +165,7 @@ function ProfileScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
   },
   imgCont: {
     width: wp("100%"),
