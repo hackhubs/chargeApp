@@ -7,20 +7,23 @@ import {
   TextInput,
   Text,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
 } from "react-native";
 
 import { Card, Button, Icon } from "react-native-elements";
 
-const App = () => {
+const QRScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.cont}>
-      <TouchableHighlight style={styles.scanner}>
+      <TouchableOpacity
+        style={styles.scanner}
+        onPress={() => navigation.navigate("Charge")}
+      >
         <Image
           source={require("../images/scan.png")}
           style={{ width: 250, height: 250 }}
         />
-      </TouchableHighlight>
+      </TouchableOpacity>
       <View style={styles.cont2}>
         <Text style={{ fontSize: 24, marginLeft: 30, marginTop: 45 }}>
           Charge via Station ID
@@ -33,7 +36,7 @@ const App = () => {
     </SafeAreaView>
   );
 };
-export default App;
+export default QRScreen;
 
 const styles = StyleSheet.create({
   cont: {

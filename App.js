@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import HomePageScreen from "./screens/HomePageScreen";
 import CardScreen from "./components/CardScreen";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import AppNavigator from "./navigation/AppNavigator";
 import OnBoardingScreen from "./screens/OnBoardingScreen";
 import ChargingDetails from "./screens/ChargingDetails";
@@ -11,15 +12,23 @@ import SignupScreen from "./screens/SignupScreen";
 import SignupOTP from "./screens/SignupOTP";
 import SignupDetails from "./screens/SignupDetails";
 import ProfileScreen from "./screens/ProfileScreen";
-import TestScreen from "./screens/TestScreen";
-import PaymentScreen from "./screens/PaymentScreen";
+import ChargeSuccess from "./screens/ChargeSuccess";
+import ChargingStatus from "./screens/ChargingStatus";
 import FeedbackScreen from "./screens/FeedbackScreen";
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   return (
-    // <PaymentScreen />
     <NavigationContainer>
-      <AppNavigator />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Payment" component={ChargingDetails} />
+        <Stack.Screen name="AppBottom" component={AppNavigator} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

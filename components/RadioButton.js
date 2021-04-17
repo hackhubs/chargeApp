@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
   },
   radioText: {
     marginRight: wp("4%"),
-    fontSize: wp("5%"),
+    fontSize: wp("4.5%"),
     marginLeft: wp("5%"),
     color: "#031925",
   },
   radioCircle: {
-    height: hp("4%"),
-    width: wp("6.5%"),
+    height: hp("2.6%"),
+    width: wp("5%"),
     borderRadius: wp("6%") / 2,
     borderWidth: 2,
     borderColor: "#9F9F9F",
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   selectedRb: {
     width: wp("3%"),
     height: hp("2%"),
-    borderRadius: wp("3%") / 2,
+    borderRadius: wp("4%") / 2,
     backgroundColor: "#28A7EB",
     borderColor: "#28A7EB",
   },

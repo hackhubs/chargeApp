@@ -3,14 +3,17 @@ import { Image, View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomePageScreen from "../screens/HomePageScreen";
-import PaymentScreen from "../screens/PaymentScreen";
+import ChargingStatus from "../screens/ChargingStatus";
 import QRScreen from "../screens/QRScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import FeedbackScreen from "../screens/FeedbackScreen";
 import ReportScreen from "../screens/ReportScreen";
+import ChargingDetails from "../screens/ChargingDetails";
+import ChargeSuccess from "../screens/ChargeSuccess";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+const Stack2 = createStackNavigator();
 
 function ProfileNavigator() {
   return (
@@ -24,6 +27,22 @@ function ProfileNavigator() {
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Feedback" component={FeedbackScreen} />
       <Stack.Screen name="Report" component={ReportScreen} />
+    </Stack.Navigator>
+  );
+}
+
+function ChargeNavigator() {
+  return (
+    <Stack.Navigator
+      initialRouteName="QR"
+      showLabel="false"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="QR" component={QRScreen} />
+      <Stack.Screen name="Charge" component={ChargingStatus} />
+      <Stack.Screen name="Success" component={ChargeSuccess} />
     </Stack.Navigator>
   );
 }
@@ -75,7 +94,7 @@ const AppNavigator = () => (
     />
     <Tab.Screen
       name="QR"
-      component={QRScreen}
+      component={ChargeNavigator}
       options={{
         tabBarIcon: ({ focused }) => (
           <View

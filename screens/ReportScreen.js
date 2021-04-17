@@ -8,7 +8,7 @@ import {
 function ReportScreen(props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Give Feedback</Text>
+      <Text style={styles.header}>Report issue</Text>
       <Text style={styles.subtitle}>
         We are always working to improve the veCharge experience. We would love
         to hear what we are doing right and how we can make our service better.

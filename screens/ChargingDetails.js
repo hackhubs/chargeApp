@@ -34,9 +34,9 @@ const PROP = [
   },
 ];
 
-function ChargingDetails(props) {
+function ChargingDetails({ navigation }) {
   return (
-    <ScrollView>
+    <ScrollView style={styles.cont}>
       <SafeAreaView style={styles.cont}>
         <View>
           <ImageBackground
@@ -147,7 +147,7 @@ function ChargingDetails(props) {
               marginTop: wp("3%"),
               fontWeight: "bold",
               color: "#3D3D3D",
-              fontSize: wp("7%"),
+              fontSize: wp("6%"),
             }}
           >
             Complete Payment
@@ -160,10 +160,10 @@ function ChargingDetails(props) {
           flexDirection="row"
           style={{
             alignItems: "center",
-            marginTop: wp("30%"),
+            marginTop: wp("38%"),
             borderRadius: 8,
             borderWidth: 0.3,
-            height: hp("11%"),
+            height: hp("10%"),
           }}
         >
           <View flexDirection="column">
@@ -172,6 +172,7 @@ function ChargingDetails(props) {
                 fontWeight: "bold",
                 marginLeft: wp("5%"),
                 fontSize: wp("8%"),
+                marginTop: wp("2%"),
                 color: "black",
               }}
             >
@@ -187,13 +188,15 @@ function ChargingDetails(props) {
               resizeMode="contain"
             />
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("AppBottom")}>
             <Image
               source={require("../images/payNow.png")}
               style={{
                 height: hp("6%"),
-                width: wp("60%"),
-                marginLeft: wp("7%"),
+                width: wp("50%"),
+                marginLeft: wp("8%"),
+                marginTop: wp("3%"),
+                borderRadius: wp("8%") / 4,
               }}
             />
           </TouchableOpacity>
