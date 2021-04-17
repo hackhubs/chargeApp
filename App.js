@@ -13,6 +13,7 @@ import SignupDetails from "./screens/SignupDetails";
 import ProfileScreen from "./screens/ProfileScreen";
 import TestScreen from "./screens/TestScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import FeedbackScreen from "./screens/FeedbackScreen";
 
 export default function App() {
   return (

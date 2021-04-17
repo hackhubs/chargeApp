@@ -1,12 +1,32 @@
 import React from "react";
 import { Image, View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import HomePageScreen from "../screens/HomePageScreen";
 import PaymentScreen from "../screens/PaymentScreen";
 import QRScreen from "../screens/QRScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import FeedbackScreen from "../screens/FeedbackScreen";
+import ReportScreen from "../screens/ReportScreen";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function ProfileNavigator() {
+  return (
+    <Stack.Navigator
+      initialRouteName="Profile"
+      showLabel="false"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Feedback" component={FeedbackScreen} />
+      <Stack.Screen name="Report" component={ReportScreen} />
+    </Stack.Navigator>
+  );
+}
 
 const AppNavigator = () => (
   <Tab.Navigator
@@ -101,7 +121,7 @@ const AppNavigator = () => (
     />
     <Tab.Screen
       name="Profile"
-      component={ProfileScreen}
+      component={ProfileNavigator}
       options={{
         tabBarIcon: ({ focused }) => (
           <View>

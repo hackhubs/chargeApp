@@ -13,8 +13,10 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import FeedbackScreen from "./FeedbackScreen";
+import ReportScreen from "./ReportScreen";
 
-function ProfileScreen(props) {
+function ProfileScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
       <SafeAreaView style={styles.container}>
@@ -67,14 +69,20 @@ function ProfileScreen(props) {
               resizeMode="contain"
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate("Report")}
+          >
             <Image
               source={require("../images/img3.png")}
               style={styles.item2}
               resizeMode="contain"
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate("Feedback")}
+          >
             <Image
               source={require("../images/img4.png")}
               style={styles.item2}
