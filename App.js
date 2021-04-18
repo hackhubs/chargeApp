@@ -15,21 +15,24 @@ import ProfileScreen from "./screens/ProfileScreen";
 import ChargeSuccess from "./screens/ChargeSuccess";
 import ChargingStatus from "./screens/ChargingStatus";
 import FeedbackScreen from "./screens/FeedbackScreen";
+import FinalCharge from "./screens/FinalCharge";
+import BillingScreen from "./screens/BillingScreen";
 
 export default function App() {
-  const Stack = createStackNavigator();
+  // const Stack = createStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="Payment" component={ChargingDetails} />
-        <Stack.Screen name="AppBottom" component={AppNavigator} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <BillingScreen />
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //     screenOptions={{
+    //       headerShown: false,
+    //     }}
+    //   >
+    //     <Stack.Screen name="Payment" component={ChargingDetails} />
+    //     <Stack.Screen name="AppBottom" component={AppNavigator} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 }
 

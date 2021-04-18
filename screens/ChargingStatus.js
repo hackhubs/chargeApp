@@ -10,6 +10,10 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from "react-native";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const ChargingStatus = ({ navigation }) => {
   return (
