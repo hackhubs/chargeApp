@@ -58,14 +58,20 @@ function ProfileScreen({ navigation }) {
           />
         </View>
         <View>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Work")}
+            activeOpacity={0.5}
+          >
             <Image
               source={require("../images/img1.png")}
               style={styles.item1}
               resizeMode="contain"
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate("Refer")}
+          >
             <Image
               source={require("../images/img2.png")}
               style={styles.item2}
@@ -92,14 +98,20 @@ function ProfileScreen({ navigation }) {
               resizeMode="contain"
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate("Rate")}
+          >
             <Image
               source={require("../images/img5.png")}
               style={styles.item2}
               resizeMode="contain"
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.5}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate("About")}
+          >
             <Image
               source={require("../images/img6.png")}
               style={{

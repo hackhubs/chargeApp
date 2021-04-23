@@ -1,14 +1,33 @@
 import React from "react";
-import { View, StyleSheet, Text, TextInput, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  TextInput,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
-function ReportScreen(props) {
+function ReportScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Report issue</Text>
+      <View flexDirection="row">
+        <TouchableOpacity
+          style={{ marginTop: wp("7%"), marginLeft: wp("2%") }}
+          activeOpacity={0.5}
+          onPress={() => navigation.goBack("Profile")}
+        >
+          <Image
+            source={require("../images/back1.png")}
+            style={{ height: hp("5%"), width: wp("10%") }}
+          />
+        </TouchableOpacity>
+        <Text style={styles.header}>Report issue</Text>
+      </View>
       <Text style={styles.subtitle}>
         We are always working to improve the veCharge experience. We would love
         to hear what we are doing right and how we can make our service better.

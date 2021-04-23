@@ -18,6 +18,7 @@ import FeedbackScreen from "./screens/FeedbackScreen";
 import FinalCharge from "./screens/FinalCharge";
 import BillingScreen from "./screens/BillingScreen";
 import EditProfile from "./screens/EditProfile";
+import ReportScreen from "./screens/ReportScreen";
 import ProfileNavigator from "./navigation/ProfileNavigator";
 
 export default function App() {
@@ -32,7 +33,7 @@ export default function App() {
         }}
       >
         <Stack.Screen name="AppBottom" component={AppNavigator} />
-        <Stack.Screen name="Edit" component={EditProfile} />
+        {/* <Stack.Screen name="Edit" component={EditProfile} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
