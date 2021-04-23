@@ -11,7 +11,7 @@ import {
   ScrollView,
   FlatList,
 } from "react-native";
-import { Searchbar } from "react-native-paper";
+// import { Searchbar } from "react-native-paper";
 import { Feather } from "@expo/vector-icons";
 import { Card, Button, Icon } from "react-native-elements";
 import CardScreen from "../components/CardScreen";
@@ -98,29 +98,30 @@ const HomePageScreen = () => {
             </View>
           </ImageBackground>
         </View>
-        <View
+        {/* <View
           style={{
             marginTop: -50,
             marginLeft: 10,
             marginRight: 10,
           }}
-        >
-          <Searchbar
+        > */}
+        {/* <Searchbar
             placeholder="Search for Charging Ports"
             icon={<Feather name="search" size={40} color="#D2D2D2" />}
             iconColor="#D2D2D2"
             style={{ borderRadius: 25 }}
-          />
-        </View>
+          /> */}
+        {/* </View> */}
         <View>
-          <TouchableOpacity activeOpacity={0.6}>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            style={{ marginLeft: wp("15%"), marginTop: -wp("4%") }}
+          >
             <Image
               source={require("../images/host.png")}
               style={{
                 width: wp("70%"),
                 height: hp("10%"),
-                marginLeft: 60,
-                marginTop: 20,
               }}
             />
           </TouchableOpacity>

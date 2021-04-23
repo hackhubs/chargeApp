@@ -13,26 +13,26 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import RadioButton from "../components/RadioButton";
+// import RadioButton from "../components/RadioButton";
 
-const PROP = [
-  {
-    key: "1",
-    text: "Paytm",
-  },
-  {
-    key: "2",
-    text: "Google Pay",
-  },
-  {
-    key: "3",
-    text: "Net Banking",
-  },
-  {
-    key: "4",
-    text: "Card",
-  },
-];
+// const PROP = [
+//   {
+//     key: "1",
+//     text: "Paytm",
+//   },
+//   {
+//     key: "2",
+//     text: "Google Pay",
+//   },
+//   {
+//     key: "3",
+//     text: "Net Banking",
+//   },
+//   {
+//     key: "4",
+//     text: "Card",
+//   },
+// ];
 
 function ChargingDetails({ navigation }) {
   return (
@@ -40,27 +40,32 @@ function ChargingDetails({ navigation }) {
       <SafeAreaView style={styles.cont}>
         <View>
           <ImageBackground
-            source={require("../images/details.png")}
+            source={require("../images/chargeHeader.png")}
             style={{ width: wp("100%"), height: hp("16%") }}
             resizeMode="cover"
           >
-            <Image
-              source={require("../images/Back.png")}
-              style={{
-                width: wp("5%"),
-                height: hp("3%"),
-                marginLeft: wp("4%"),
-                marginTop: wp("2%"),
-              }}
-            />
+            <View flexDirection="row">
+              <TouchableOpacity onPress={() => console.log("btn ")}>
+                <Image
+                  source={require("../images/Back.png")}
+                  style={{
+                    width: wp("7%"),
+                    height: hp("4%"),
+                    marginLeft: wp("6%"),
+                    marginTop: wp("8%"),
+                  }}
+                />
+              </TouchableOpacity>
+              <Text style={styles.txt}>Charging Details</Text>
+            </View>
           </ImageBackground>
         </View>
 
-        <View flexDirection="row">
-          <View style={styles.box1} flexDirection="column">
-            <View flexDirection="row">
+        <View flexDirection="column">
+          <View style={styles.box3} flexDirection="row">
+            <View flexDirection="row" style={{ marginRight: wp("4%") }}>
               <Image
-                source={require("../images/energy-icon.png")}
+                source={require("../images/time.png")}
                 style={{
                   height: hp("5%"),
                   width: wp("10%"),
@@ -73,32 +78,77 @@ function ChargingDetails({ navigation }) {
                   style={{
                     fontWeight: "bold",
                     color: "white",
-                    fontSize: wp("5%"),
+                    fontSize: wp("5.2%"),
+                    marginTop: wp("2%"),
+                  }}
+                >
+                  Time
+                </Text>
+                <Text style={{ fontSize: wp("3.4%"), color: "white" }}>
+                  Changed
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text
+                style={{
+                  fontSize: wp("6%"),
+                  color: "white",
+                  fontWeight: "bold",
+                  padding: wp("1%"),
+                  marginTop: wp("4%"),
+                  marginLeft: wp("2%"),
+                }}
+              >
+                2h 35min
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.box1} flexDirection="column">
+            <View flexDirection="row">
+              <Image
+                source={require("../images/energy-icon.png")}
+                style={{
+                  height: hp("5%"),
+                  width: wp("10%"),
+                  margin: wp("3%"),
+                  borderRadius: wp("10%") / 8,
+                }}
+              />
+              <View style={{ marginRight: wp("4%") }}>
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: "white",
+                    fontSize: wp("5.2%"),
                     marginTop: wp("2%"),
                   }}
                 >
                   Energy
                 </Text>
-                <Text style={{ fontSize: wp("3.5%"), color: "white" }}>
+                <Text style={{ fontSize: wp("3.4%"), color: "white" }}>
                   Consumed
                 </Text>
               </View>
+              <View>
+                <Text
+                  style={{
+                    fontSize: wp("6%"),
+                    color: "white",
+                    fontWeight: "bold",
+                    padding: wp("1%"),
+                    marginTop: wp("4%"),
+                  }}
+                >
+                  7.4 kWh
+                </Text>
+              </View>
             </View>
-
-            <Text
-              style={{
-                fontSize: wp("9%"),
-                color: "white",
-                fontWeight: "bold",
-                padding: wp("1%"),
-                marginTop: wp("4%"),
-              }}
-            >
-              7.4 kWh
-            </Text>
           </View>
-          <View style={styles.box2} flexDirection="column">
-            <View flexDirection="row">
+
+          <View style={styles.box2} flexDirection="row">
+            <View flexDirection="row" style={{ marginRight: wp("4%") }}>
               <Image
                 source={require("../images/cost.png")}
                 style={{
@@ -113,13 +163,13 @@ function ChargingDetails({ navigation }) {
                   style={{
                     fontWeight: "bold",
                     color: "white",
-                    fontSize: wp("5%"),
+                    fontSize: wp("5.2%"),
                     marginTop: wp("2%"),
                   }}
                 >
                   Amount
                 </Text>
-                <Text style={{ fontSize: wp("3.5%"), color: "white" }}>
+                <Text style={{ fontSize: wp("3.4%"), color: "white" }}>
                   Payable
                 </Text>
               </View>
@@ -127,7 +177,7 @@ function ChargingDetails({ navigation }) {
             <View>
               <Text
                 style={{
-                  fontSize: wp("9%"),
+                  fontSize: wp("6%"),
                   color: "white",
                   fontWeight: "bold",
                   padding: wp("1%"),
@@ -135,7 +185,7 @@ function ChargingDetails({ navigation }) {
                   marginLeft: wp("2%"),
                 }}
               >
-                48 INR
+                {"\u20B9"} 148.45
               </Text>
             </View>
           </View>
@@ -166,35 +216,25 @@ function ChargingDetails({ navigation }) {
             height: hp("10%"),
           }}
         >
-          <View flexDirection="column">
-            <Text
-              style={{
-                fontWeight: "bold",
-                marginLeft: wp("5%"),
-                fontSize: wp("8%"),
-                marginTop: wp("2%"),
-                color: "black",
-              }}
-            >
-              {"\u20B9"} 48
-            </Text>
-            <Image
-              source={require("../images/view.png")}
-              style={{
-                height: hp("1.3%"),
-                width: wp("25%"),
-                marginLeft: wp("3%"),
-              }}
-              resizeMode="contain"
-            />
-          </View>
+          <Text
+            style={{
+              fontWeight: "bold",
+              marginLeft: wp("5%"),
+              fontSize: wp("6%"),
+              marginTop: wp("2%"),
+              color: "black",
+            }}
+          >
+            {"\u20B9"} 148.45
+          </Text>
+
           <TouchableOpacity onPress={() => navigation.navigate("AppBottom")}>
             <Image
               source={require("../images/payNow.png")}
               style={{
                 height: hp("6%"),
                 width: wp("50%"),
-                marginLeft: wp("8%"),
+                marginLeft: wp("12%"),
                 marginTop: wp("3%"),
                 borderRadius: wp("8%") / 4,
               }}
@@ -211,23 +251,46 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
   },
+  txt: {
+    color: "white",
+    fontSize: wp("8%"),
+    fontWeight: "bold",
+    letterSpacing: 2,
+    marginLeft: wp("8%"),
+    marginTop: wp("7%"),
+  },
   box1: {
     backgroundColor: "#03AD70",
-    height: hp("19%"),
-    width: wp("40%"),
+    height: hp("16%"),
+    width: wp("70%"),
     borderRadius: hp("20%") / 8,
-    margin: wp("5%"),
+    marginLeft: wp("10%"),
     padding: 5,
     marginTop: hp("5%"),
+    justifyContent: "center",
+    alignItems: "center",
   },
   box2: {
     backgroundColor: "#2D9CDB",
-    height: hp("19%"),
-    width: wp("40%"),
+    height: hp("16%"),
+    width: wp("70%"),
     borderRadius: hp("20%") / 8,
-    margin: wp("5%"),
+    marginLeft: wp("10%"),
     padding: 5,
     marginTop: hp("5%"),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  box3: {
+    backgroundColor: "#4B5358",
+    height: hp("16%"),
+    width: wp("70%"),
+    borderRadius: hp("20%") / 8,
+    marginLeft: wp("10%"),
+    padding: 5,
+    marginTop: hp("5%"),
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

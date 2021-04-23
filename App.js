@@ -25,17 +25,18 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
+    <BillingScreen />
     // <EditProfile />
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="AppBottom" component={AppNavigator} />
-        {/* <Stack.Screen name="Edit" component={EditProfile} /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //     screenOptions={{
+    //       headerShown: false,
+    //     }}
+    //   >
+    //     <Stack.Screen name="AppBottom" component={AppNavigator} />
+    //     {/* <Stack.Screen name="Edit" component={EditProfile} /> */}
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 }
 

@@ -27,7 +27,7 @@ const AppNavigator = () => (
       style: {
         height: 60,
         backgroundColor: "white",
-        // elevation: 3,
+        elevation: 50,
       },
     }}
   >
@@ -82,11 +82,11 @@ const AppNavigator = () => (
             }}
           >
             <Image
-              source={require("../images/scan-icon.png")}
+              source={require("../images/chargeNav.png")}
               resizeMode="contain"
               style={{
                 width: 60,
-                height: 55,
+                height: 50,
                 marginTop: 2,
                 marginLeft: 20,
                 tintColor: focused ? "#069DFF" : "#000000",

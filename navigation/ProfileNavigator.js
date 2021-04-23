@@ -12,7 +12,12 @@ import EditProfile from "../screens/EditProfile";
 
 const Stack = createStackNavigator();
 
-function ProfileNavigator() {
+const ProfileNavigator = ({ navigation, route }) => {
+  if (route.state && route.state.index > 0) {
+    navigation.setOptions({ tabBarVisible: false });
+  } else {
+    navigation.setOptions({ tabBarVisible: true });
+  }
   return (
     <Stack.Navigator
       initialRouteName="Profile"
@@ -22,57 +27,15 @@ function ProfileNavigator() {
       }}
     >
       <Stack.Screen name="Profile" component={ProfileScreen} />
-      <Stack.Screen
-        name="Feedback"
-        component={FeedbackScreen}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="Report"
-        component={ReportScreen}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="Edit"
-        component={EditProfile}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="Work"
-        component={WorkingScreen}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="Refer"
-        component={ReferScreen}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="About"
-        component={About}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
-      <Stack.Screen
-        name="Rate"
-        component={RateScreen}
-        options={{
-          tabBarVisible: false,
-        }}
-      />
+      <Stack.Screen name="Feedback" component={FeedbackScreen} />
+      <Stack.Screen name="Report" component={ReportScreen} />
+      <Stack.Screen name="Edit" component={EditProfile} />
+      <Stack.Screen name="Work" component={WorkingScreen} />
+      <Stack.Screen name="Refer" component={ReferScreen} />
+      <Stack.Screen name="About" component={About} />
+      <Stack.Screen name="Rate" component={RateScreen} />
     </Stack.Navigator>
   );
-}
+};
 
 export default ProfileNavigator;

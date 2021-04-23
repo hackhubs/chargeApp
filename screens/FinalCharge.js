@@ -141,19 +141,31 @@ function FinalCharge(props) {
           Rohini Community Charging Station, B-5/30, New Delhi - 110034
         </Text>
         <View flexDirection="row">
-          <TouchableOpacity activeOpacity={0.6}>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => console.log("receipt")}
+          >
             <Image
               source={require("../images/receiptBtn.png")}
               style={styles.btn1}
             />
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.6}>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => console.log("report ")}
+          >
             <Image
               source={require("../images/reportbtn.png")}
               style={styles.btn2}
             />
           </TouchableOpacity>
         </View>
+        <TouchableOpacity>
+          <Image
+            source={require("../images/continue.png")}
+            style={styles.btn3}
+          />
+        </TouchableOpacity>
       </SafeAreaView>
     </ScrollView>
   );
@@ -183,18 +195,25 @@ const styles = StyleSheet.create({
     marginTop: hp("5%"),
   },
   btn1: {
-    width: wp("40%"),
-    height: hp("6%"),
-    marginLeft: wp("4%"),
+    width: wp("38%"),
+    height: hp("5%"),
+    marginLeft: wp("8%"),
     borderRadius: wp("6%") / 2,
     marginTop: wp("10%"),
   },
   btn2: {
-    width: wp("40%"),
-    height: hp("6%"),
+    width: wp("38%"),
+    height: hp("5%"),
     marginLeft: wp("8%"),
     borderRadius: wp("6%") / 2,
     marginTop: wp("10%"),
+  },
+  btn3: {
+    width: wp("60%"),
+    height: hp("6%"),
+    marginLeft: wp("20%"),
+    borderRadius: wp("6%") / 2,
+    marginTop: wp("16%"),
   },
 });
 

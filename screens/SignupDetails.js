@@ -44,9 +44,11 @@ function SignupDetails(props) {
       </View>
 
       <View style={{ marginTop: wp("4%"), marginLeft: wp("10%") }}>
-        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>Email</Text>
+        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>
+          Phone Number
+        </Text>
         <TextInput
-          placeholder="Enter Email Address"
+          placeholder="Enter Phone Number"
           style={{
             color: "#030303",
             borderBottomWidth: 1,
