@@ -140,7 +140,7 @@ function ChargingDetails({ navigation }) {
             </View>
           </View>
         </View>
-        <View>
+        {/* <View>
           <Text
             style={{
               marginLeft: wp("5%"),
@@ -155,12 +155,12 @@ function ChargingDetails({ navigation }) {
           <View style={styles.container}>
             <RadioButton PROP={PROP} />
           </View>
-        </View>
+        </View> */}
         <View
           flexDirection="row"
           style={{
             alignItems: "center",
-            marginTop: wp("38%"),
+            marginTop: wp("85%"),
             borderRadius: 8,
             borderWidth: 0.3,
             height: hp("10%"),

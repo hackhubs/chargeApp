@@ -17,22 +17,24 @@ import ChargingStatus from "./screens/ChargingStatus";
 import FeedbackScreen from "./screens/FeedbackScreen";
 import FinalCharge from "./screens/FinalCharge";
 import BillingScreen from "./screens/BillingScreen";
+import EditProfile from "./screens/EditProfile";
+import ProfileNavigator from "./navigation/ProfileNavigator";
 
 export default function App() {
-  // const Stack = createStackNavigator();
+  const Stack = createStackNavigator();
 
   return (
-    <BillingScreen />
-    // <NavigationContainer>
-    //   <Stack.Navigator
-    //     screenOptions={{
-    //       headerShown: false,
-    //     }}
-    //   >
-    //     <Stack.Screen name="Payment" component={ChargingDetails} />
-    //     <Stack.Screen name="AppBottom" component={AppNavigator} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
+    // <EditProfile />
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="AppBottom" component={AppNavigator} />
+        <Stack.Screen name="Edit" component={EditProfile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

@@ -10,42 +10,11 @@ import FeedbackScreen from "../screens/FeedbackScreen";
 import ReportScreen from "../screens/ReportScreen";
 import ChargingDetails from "../screens/ChargingDetails";
 import ChargeSuccess from "../screens/ChargeSuccess";
+import EditProfile from "../screens/EditProfile";
+import ProfileNavigator from "../navigation/ProfileNavigator";
+import ChargeNavigator from "../navigation/ChargeNavigator";
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
-const Stack2 = createStackNavigator();
-
-function ProfileNavigator() {
-  return (
-    <Stack.Navigator
-      initialRouteName="Profile"
-      showLabel="false"
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="Profile" component={ProfileScreen} />
-      <Stack.Screen name="Feedback" component={FeedbackScreen} />
-      <Stack.Screen name="Report" component={ReportScreen} />
-    </Stack.Navigator>
-  );
-}
-
-function ChargeNavigator() {
-  return (
-    <Stack.Navigator
-      initialRouteName="QR"
-      showLabel="false"
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="QR" component={QRScreen} />
-      <Stack.Screen name="Charge" component={ChargingStatus} />
-      <Stack.Screen name="Success" component={ChargeSuccess} />
-    </Stack.Navigator>
-  );
-}
 
 const AppNavigator = () => (
   <Tab.Navigator

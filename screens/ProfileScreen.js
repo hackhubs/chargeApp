@@ -15,6 +15,7 @@ import {
 } from "react-native-responsive-screen";
 import FeedbackScreen from "./FeedbackScreen";
 import ReportScreen from "./ReportScreen";
+import Editprofile from "./EditProfile";
 
 function ProfileScreen({ navigation }) {
   return (
@@ -35,7 +36,9 @@ function ProfileScreen({ navigation }) {
                 />
                 <Text style={styles.textCont2}>Rohini/City , Delhi/State</Text>
               </View>
-              <Text style={styles.textCont3}>View Profile</Text>
+              <TouchableOpacity onPress={() => navigation.navigate("Edit")}>
+                <Text style={styles.textCont3}>View Profile</Text>
+              </TouchableOpacity>
             </View>
           </ImageBackground>
         </View>
