@@ -107,12 +107,12 @@ function FinalCharge(props) {
             </View>
             <Text
               style={{
-                fontSize: wp("9%"),
+                fontSize: wp("8%"),
                 color: "white",
                 fontWeight: "bold",
                 padding: wp("1%"),
                 marginTop: wp("4%"),
-                marginLeft: wp("2%"),
+                marginLeft: wp("4%"),
               }}
             >
               48 INR

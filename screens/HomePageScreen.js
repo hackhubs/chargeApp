@@ -20,6 +20,7 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import RecentCard from "../components/RecentCard";
+import Card1 from "../components/Card1";
 
 const details = [
   {
@@ -127,27 +128,40 @@ const HomePageScreen = () => {
           </TouchableOpacity>
         </View>
         <View>
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 22,
-              marginTop: 15,
-              marginLeft: 30,
-            }}
-          >
-            Charging Points Near Me
-          </Text>
+          <View flexDirection="row">
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: wp("5%"),
+                marginTop: wp("3%"),
+                marginLeft: wp("5%"),
+              }}
+            >
+              Charging Points Near Me
+            </Text>
+            <TouchableOpacity
+              onPress={() => console.log("more")}
+              activeOpacity={0.5}
+              style={{ marginLeft: wp("10%"), marginTop: wp("4%") }}
+            >
+              <Image
+                style={{
+                  width: wp("20%"),
+                  height: hp("3%"),
+
+                  borderRadius: wp("6%") / 2,
+                }}
+                source={require("../images/more.png")}
+              />
+            </TouchableOpacity>
+          </View>
           <ScrollView>
             <FlatList
               data={details}
               keyExtractor={(details) => details.id}
               horizontal={true}
               renderItem={({ item }) => (
-                <CardScreen
-                  status={item.status}
-                  dis={item.dis}
-                  loc={item.loc}
-                />
+                <Card1 status={item.status} dis={item.dis} loc={item.loc} />
               )}
             />
           </ScrollView>
@@ -184,7 +198,7 @@ const styles = StyleSheet.create({
   cont: {
     flex: 1,
     // marginBottom: 50,
-    backgroundColor: "white",
+    backgroundColor: "#F0ECEC",
   },
   paragraph: {
     margin: 24,

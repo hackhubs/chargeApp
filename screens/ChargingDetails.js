@@ -13,6 +13,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import LinearGradient from "react-native-linear-gradient";
 // import RadioButton from "../components/RadioButton";
 
 // const PROP = [
@@ -67,8 +68,8 @@ function ChargingDetails({ navigation }) {
               <Image
                 source={require("../images/time.png")}
                 style={{
-                  height: hp("5%"),
-                  width: wp("10%"),
+                  height: hp("6%"),
+                  width: wp("11%"),
                   margin: wp("3%"),
                   borderRadius: wp("10%") / 8,
                 }}
@@ -96,8 +97,8 @@ function ChargingDetails({ navigation }) {
                   color: "white",
                   fontWeight: "bold",
                   padding: wp("1%"),
-                  marginTop: wp("4%"),
-                  marginLeft: wp("2%"),
+                  marginTop: wp("1.4%"),
+                  marginLeft: wp("6%"),
                 }}
               >
                 2h 35min
@@ -110,8 +111,8 @@ function ChargingDetails({ navigation }) {
               <Image
                 source={require("../images/energy-icon.png")}
                 style={{
-                  height: hp("5%"),
-                  width: wp("10%"),
+                  height: hp("6%"),
+                  width: wp("11%"),
                   margin: wp("3%"),
                   borderRadius: wp("10%") / 8,
                 }}
@@ -138,7 +139,8 @@ function ChargingDetails({ navigation }) {
                     color: "white",
                     fontWeight: "bold",
                     padding: wp("1%"),
-                    marginTop: wp("4%"),
+                    marginTop: wp("2%"),
+                    marginLeft: wp("6%"),
                   }}
                 >
                   7.4 kWh
@@ -152,8 +154,8 @@ function ChargingDetails({ navigation }) {
               <Image
                 source={require("../images/cost.png")}
                 style={{
-                  height: hp("5%"),
-                  width: wp("10%"),
+                  height: hp("6%"),
+                  width: wp("11%"),
                   margin: wp("3%"),
                   borderRadius: wp("10%") / 8,
                 }}
@@ -181,8 +183,8 @@ function ChargingDetails({ navigation }) {
                   color: "white",
                   fontWeight: "bold",
                   padding: wp("1%"),
-                  marginTop: wp("4%"),
-                  marginLeft: wp("2%"),
+                  marginTop: wp("2%"),
+                  marginLeft: wp("5%"),
                 }}
               >
                 {"\u20B9"} 148.45
@@ -190,35 +192,21 @@ function ChargingDetails({ navigation }) {
             </View>
           </View>
         </View>
-        {/* <View>
-          <Text
-            style={{
-              marginLeft: wp("5%"),
-              marginTop: wp("3%"),
-              fontWeight: "bold",
-              color: "#3D3D3D",
-              fontSize: wp("6%"),
-            }}
-          >
-            Complete Payment
-          </Text>
-          <View style={styles.container}>
-            <RadioButton PROP={PROP} />
-          </View>
-        </View> */}
+
         <View
           flexDirection="row"
           style={{
             alignItems: "center",
-            marginTop: wp("85%"),
             borderRadius: 8,
             borderWidth: 0.3,
             height: hp("10%"),
+            marginTop: wp("15%"),
           }}
         >
           <Text
             style={{
               fontWeight: "bold",
+              marginTop: wp("40%"),
               marginLeft: wp("5%"),
               fontSize: wp("6%"),
               marginTop: wp("2%"),
@@ -256,7 +244,7 @@ const styles = StyleSheet.create({
     fontSize: wp("8%"),
     fontWeight: "bold",
     letterSpacing: 2,
-    marginLeft: wp("8%"),
+    marginLeft: wp("5%"),
     marginTop: wp("7%"),
   },
   box1: {

@@ -26,29 +26,33 @@ function EditProfile({ navigation }) {
           source={require("../images/edit.png")}
         />
         <TouchableOpacity
-            activeOpacity={0.5}
-            onPress={() => navigation.goBack("Profile")}  style={styles.backBtn}>
+          activeOpacity={0.5}
+          onPress={() => navigation.goBack("Profile")}
+          style={styles.backBtn}
+        >
           <Image
             source={require("../images/Back.png")}
-            style={{height:hp('4%'),width:wp('10%')}}
+            style={{ height: hp("4%"), width: wp("10%") }}
           />
         </TouchableOpacity>
-        <TouchableOpacity  activeOpacity={0.5}
+        <TouchableOpacity
+          activeOpacity={0.5}
           onPress={() => console.log("pressed avatar")}
           style={styles.avatar}
         >
           <Image
             source={require("../images/avatar.png")}
-            style={{height:hp("8%"),width:wp("15%")}}
+            style={{ height: hp("8%"), width: wp("16%") }}
           />
         </TouchableOpacity>
-        <TouchableOpacity  activeOpacity={0.5}
+        <TouchableOpacity
+          activeOpacity={0.5}
           onPress={() => console.log("pressed edit")}
           style={styles.pencil}
         >
           <Image
             source={require("../images/pencil.png")}
-            style={{height:hp("4%"),width:wp("8%")}}
+            style={{ height: hp("4%"), width: wp("8%") }}
           />
         </TouchableOpacity>
         <Text style={styles.name}>Moksh Garg</Text>
@@ -115,9 +119,9 @@ const styles = StyleSheet.create({
     fontSize: wp("6%"),
     color: "white",
     fontWeight: "bold",
-   position:"absolute",
-    top:110,
-    left:120,
+    position: "absolute",
+    top: 110,
+    left: 120,
     letterSpacing: hp("0.5%"),
   },
   cont1: {
@@ -133,42 +137,41 @@ const styles = StyleSheet.create({
   backBtn: {
     position: "absolute",
     top: 30,
-    left:15,
+    left: 15,
   },
   textCont2: {
     color: "white",
     fontSize: wp("3.5%"),
-    marginLeft: wp("3%"),
-    marginTop: wp("1%"),
+    marginLeft: wp("4%"),
+    marginTop: wp("2%"),
   },
 
   loc: {
     position: "absolute",
     height: hp("2%"),
     width: wp("2.8%"),
-    top:8,
-    left:-5,
+    top: 8,
+    left: -5,
   },
-  cont3:{
-    position:"absolute",
-    top:135,
-    left:100,
+  cont3: {
+    position: "absolute",
+    top: 135,
+    left: 100,
   },
-  cont4:{
-    position:"absolute",
-    top:135,
-    left:120,
+  cont4: {
+    position: "absolute",
+    top: 135,
+    left: 120,
   },
   avatar: {
     position: "absolute",
-    top:30,
-    left:150,
+    top: 30,
+    left: 150,
   },
   pencil: {
     position: "absolute",
-    top:30,
-    left:320,
-
+    top: 30,
+    left: 320,
   },
   txt: {
     color: "#626262",
