@@ -118,11 +118,10 @@ const styles = StyleSheet.create({
   name: {
     fontSize: wp("6%"),
     color: "white",
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Text-Bold",
     position: "absolute",
-    top: 110,
+    top: 100,
     left: 120,
-    letterSpacing: hp("0.5%"),
   },
   cont1: {
     marginLeft: wp("10%"),
@@ -144,6 +143,7 @@ const styles = StyleSheet.create({
     fontSize: wp("3.5%"),
     marginLeft: wp("4%"),
     marginTop: wp("2%"),
+    fontFamily: "SF-Pro-Text-Semibold",
   },
 
   loc: {
@@ -175,12 +175,14 @@ const styles = StyleSheet.create({
   },
   txt: {
     color: "#626262",
+    fontFamily: "OpenSans-Regular",
   },
   inputCont: {
     backgroundColor: "#ECECEC",
     borderRadius: wp("8%") / 6,
     flexDirection: "row",
     marginTop: wp("2%"),
+    fontFamily: "OpenSans-Regular",
   },
   input: {
     color: "#242424",
@@ -193,6 +195,7 @@ const styles = StyleSheet.create({
     padding: wp("2%"),
     marginLeft: wp("30%"),
     marginTop: wp("1.5%"),
+    fontFamily: "OpenSans-SemiBold",
   },
   btn: {
     height: hp("5%"),

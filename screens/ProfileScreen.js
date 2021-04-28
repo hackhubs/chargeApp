@@ -46,11 +46,7 @@ function ProfileScreen({ navigation }) {
           <Text style={styles.imgCont2}>
             Electrify your Establishment today
           </Text>
-          <Image
-            source={require("../images/profile1.png")}
-            resizeMode="contain"
-            style={styles.imgCont3}
-          />
+
           <Image
             source={require("../images/profile2.png")}
             resizeMode="contain"
@@ -192,40 +188,42 @@ const styles = StyleSheet.create({
   },
   imgCont: {
     width: wp("100%"),
-    height: hp("30%"),
+    height: hp("25%"),
   },
   textCont: {
     fontSize: wp("8%"),
     color: "white",
-    fontWeight: "bold",
-    marginTop: hp("4%"),
+    marginTop: hp("3%"),
     marginLeft: hp("4%"),
+    fontFamily: "SF-Pro-Text-Bold",
   },
   loc: {
-    marginTop: hp("0.6%"),
-    marginLeft: wp("6%"),
-    height: hp("3%"),
-    width: wp("4%"),
+    marginTop: hp("0.4%"),
+    marginLeft: wp("8%"),
+    height: hp("1.8%"),
+    width: wp("2.6%"),
   },
   textCont2: {
     color: "white",
-    fontSize: wp("4%"),
+    fontSize: wp("3%"),
     marginLeft: wp("3%"),
-    marginTop: wp("1%"),
+    marginTop: wp("0.5%"),
+    fontFamily: "SF-Pro-Text-Semibold",
   },
   textCont3: {
     marginLeft: wp("8%"),
-    marginTop: wp("3%"),
-    fontSize: wp("4%"),
+    marginTop: wp("4%"),
+    fontSize: wp("3.4%"),
     color: "white",
     textDecorationLine: "underline",
+    fontFamily: "SF-Pro-Text-Semibold",
   },
   imgCont2: {
     fontSize: wp("4%"),
     color: "#292929",
-    marginTop: -wp("13%"),
+    marginTop: -wp("8%"),
     marginLeft: wp("8%"),
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Text-Medium",
   },
   imgCont3: {
     height: hp("8%"),
@@ -235,7 +233,8 @@ const styles = StyleSheet.create({
   imgCont4: {
     height: hp("8%"),
     width: wp("80%"),
-    marginLeft: wp("4%"),
+    marginTop: wp("4%"),
+    marginLeft: -wp("5%"),
   },
   item1: {
     height: hp("6%"),
@@ -256,12 +255,12 @@ const styles = StyleSheet.create({
     marginTop: wp("2%"),
   },
   logout: {
-    fontWeight: "bold",
+    marginLeft: -wp("55%"),
     color: "white",
     textAlign: "center",
     marginBottom: wp("5%"),
-    height: hp("5%"),
-    width: wp("40%"),
+    height: hp("4%"),
+    width: wp("30%"),
     padding: 6,
     borderRadius: wp("8%") / 4,
     backgroundColor: "#069DFF",

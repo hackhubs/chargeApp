@@ -89,8 +89,9 @@ function BillingScreen(props) {
             }}
           >
             <Text style={styles.subtxt3}>Taxes</Text>
-            <Text style={styles.subtxt2}>{"\u20B9"} 15.00 </Text>
+            <Text style={styles.subtxt5}>{"\u20B9"} 15.00 </Text>
           </View>
+
           <View style={styles.line} />
 
           <View
@@ -101,7 +102,7 @@ function BillingScreen(props) {
             }}
           >
             <Text style={styles.subtxt1}>Amount Paid</Text>
-            <Text style={styles.subtxt2}>{"\u20B9"} 450.75 </Text>
+            <Text style={styles.subtxt4}>{"\u20B9"} 450.75 </Text>
           </View>
         </View>
       </SafeAreaView>
@@ -124,6 +125,7 @@ const styles = StyleSheet.create({
     color: "#3D3D3D",
     marginTop: wp("3%"),
     marginLeft: wp("6%"),
+    fontFamily: "SF-Pro-Display-Medium",
   },
   content2: {
     fontSize: wp("3%"),
@@ -131,18 +133,19 @@ const styles = StyleSheet.create({
     marginTop: wp("1.6%"),
     marginRight: wp("40%"),
     marginLeft: wp("6%"),
+    fontFamily: "SF-Pro-Display-Regular",
   },
   receipt: {
     width: wp("30%"),
-    fontWeight: "bold",
     fontSize: wp("5.2%"),
     color: "#3D3D3D",
     marginLeft: wp("5%"),
     marginTop: wp("4%"),
+    fontFamily: "SF-Pro-Display-Semibold",
   },
   txt1: {
     color: "#3D3D3D",
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Display-Semibold",
     marginRight: wp("20%"),
     marginTop: wp("4%"),
     fontSize: wp("5.5%"),
@@ -150,7 +153,7 @@ const styles = StyleSheet.create({
   },
   txt2: {
     color: "#3D3D3D",
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Display-Semibold",
     marginRight: wp("20%"),
     marginTop: wp("4%"),
     fontSize: wp("5.5%"),
@@ -169,6 +172,7 @@ const styles = StyleSheet.create({
     marginTop: wp("3%"),
     fontSize: wp("3.5%"),
     marginLeft: wp("10%"),
+    fontFamily: "SF-Pro-Display-Medium",
   },
   subtxt2: {
     color: "#3D3D3D",
@@ -176,12 +180,13 @@ const styles = StyleSheet.create({
     marginTop: wp("3%"),
     fontSize: wp("3.5%"),
     marginLeft: wp("15%"),
+    fontFamily: "SF-Pro-Display-Medium",
   },
   subtxt3: {
     color: "#3D3D3D",
     marginTop: wp("3%"),
     fontSize: wp("3.5%"),
-    marginLeft: wp("15%"),
+    marginLeft: wp("10%"),
     marginRight: wp("30"),
   },
   subtxt4: {
@@ -190,6 +195,14 @@ const styles = StyleSheet.create({
     marginTop: wp("3%"),
     fontSize: wp("3.5%"),
     marginLeft: wp("20%"),
+  },
+  subtxt5: {
+    color: "#3D3D3D",
+    marginRight: wp("20%"),
+    marginTop: wp("3%"),
+    fontSize: wp("3.5%"),
+    marginLeft: wp("22%"),
+    fontFamily: "SF-Pro-Display-Medium",
   },
 });
 

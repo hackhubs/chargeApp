@@ -20,7 +20,7 @@ function SignupScreen(props) {
       {/* // <SafeAreaView style={styles.container}> */}
       <View>
         <Image
-          source={require("../images/signup.png")}
+          source={require("../images/signupOTP.png")}
           resizeMode="contain"
           style={{ width: wp("100%"), height: hp("40%"), marginTop: hp("10%") }}
         />
@@ -37,7 +37,7 @@ function SignupScreen(props) {
         <View
           flexDirection="row"
           style={{
-            borderBottomWidth: 0.6,
+            borderBottomWidth: 0.5,
             color: "#E2E2E2",
             width: wp("70%"),
             marginLeft: wp("10%"),
@@ -59,6 +59,7 @@ function SignupScreen(props) {
               marginLeft: wp("3%"),
               marginTop: wp("5%"),
               color: "#030303",
+              fontFamily: "SF-Pro-Display-Regular",
             }}
           >
             +91
@@ -95,6 +96,7 @@ function SignupScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
   },
 });
 

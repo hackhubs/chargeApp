@@ -24,22 +24,25 @@ import FailedPayment from "./screens/FailedPayment";
 import HostScreen from "./screens/HostScreen";
 import RegisterHost from "./screens/RegisterHost";
 import BecomeHost from "./screens/BecomeHost";
+import QRScreen from "./screens/QRScreen";
 
 export default function App() {
-  const Stack = createStackNavigator();
+  // const Stack = createStackNavigator();
 
   return (
-    // <BecomeHost />
+    <ChargingDetails />
+    // <HomePageScreen />
+    // <QRScreen />
     // <RegisterHost />
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="AppBottom" component={AppNavigator} />
-        <Stack.Screen name="Edit" component={EditProfile} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //     screenOptions={{
+    //       headerShown: false,
+    //     }}
+    //   >
+    //     <Stack.Screen name="AppBottom" component={AppNavigator} />
+    //     <Stack.Screen name="Edit" component={EditProfile} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 }

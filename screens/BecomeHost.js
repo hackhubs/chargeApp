@@ -77,23 +77,6 @@ const styles = StyleSheet.create({
     height: hp("15%"),
     width: wp("100%"),
   },
-  heading: {
-    marginLeft: wp("11%"),
-    marginTop: wp("10%"),
-    fontSize: wp("4.3%"),
-    color: "black",
-    fontWeight: "bold",
-  },
-  input: {
-    marginLeft: wp("10%"),
-    marginTop: -wp("1%"),
-    fontSize: wp("4%"),
-    color: "#7C7C7C",
-    borderBottomColor: "#E2E2E2",
-    borderBottomWidth: 2,
-    marginRight: wp("20%"),
-    padding: wp("2%"),
-  },
 });
 
 export default BecomeHost;

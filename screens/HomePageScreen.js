@@ -77,7 +77,7 @@ const HomePageScreen = () => {
               style={{
                 position: "absolute",
                 top: 0,
-                left: 0,
+                left: wp("5%"),
                 right: 0,
                 bottom: 0,
                 justifyContent: "center",
@@ -90,7 +90,7 @@ const HomePageScreen = () => {
                   color: "white",
                   marginRight: wp("47%"),
                   marginBottom: wp("20%"),
-                  fontWeight: "bold",
+                  fontFamily: "SF-Pro-Text-Bold",
                 }}
               >
                 Hello Moksh,
@@ -130,7 +130,8 @@ const HomePageScreen = () => {
           <View flexDirection="row">
             <Text
               style={{
-                fontWeight: "bold",
+                fontFamily: "SF-Pro-Display-Semibold",
+                color: "#181725",
                 fontSize: wp("5%"),
                 marginTop: wp("3%"),
                 marginLeft: wp("5%"),
@@ -173,11 +174,12 @@ const HomePageScreen = () => {
         <View>
           <Text
             style={{
-              fontWeight: "bold",
               fontSize: 22,
               marginTop: 15,
               marginLeft: 30,
               marginTop: 20,
+              fontFamily: "SF-Pro-Display-Semibold",
+              color: "#181725",
             }}
           >
             Recent Sessions
@@ -201,15 +203,15 @@ const HomePageScreen = () => {
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "white",
   },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "center",
-    color: "#34495e",
-  },
+  // paragraph: {
+  //   margin: 24,
+  //   fontSize: 18,
+  //   fontWeight: "bold",
+  //   textAlign: "center",
+  //   color: "#34495e",
+  // },
   activeCircle: {
     borderRadius: wp("7%") / 2,
     width: wp("2%"),

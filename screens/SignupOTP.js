@@ -20,7 +20,7 @@ function SignupScreen(props) {
     <KeyboardAwareScrollView style={{ flex: 1 }}>
       {/* <ScrollView style={styles.container}> */}
       <Image
-        source={require("../images/signup.png")}
+        source={require("../images/signupOTP.png")}
         resizeMode="contain"
         style={{
           width: wp("100%"),
@@ -28,26 +28,8 @@ function SignupScreen(props) {
           marginTop: hp("10%"),
         }}
       />
-      <Text
-        style={{
-          fontSize: wp("5%"),
-          color: "#181725",
-          marginLeft: wp("10%"),
-          marginTop: wp("8%"),
-        }}
-      >
-        Enter your 4-digit code
-      </Text>
-      <Text
-        style={{
-          fontSize: wp("4%"),
-          color: "#7C7C7C",
-          marginLeft: wp("10%"),
-          marginTop: wp("3%"),
-        }}
-      >
-        code
-      </Text>
+      <Text style={styles.txt}>Enter your 4-digit code</Text>
+      <Text style={styles.code}>Code</Text>
       <View
         flexDirection="row"
         style={{
@@ -87,12 +69,7 @@ function SignupScreen(props) {
         <Image
           source={require("../images/otp2.png")}
           resizeMode="contain"
-          style={{
-            height: hp("5%"),
-            width: wp("40%"),
-            marginLeft: wp("30%"),
-            marginTop: wp("8%"),
-          }}
+          style={styles.btn}
         />
       </TouchableOpacity>
       {/* </ScrollView> */}
@@ -103,6 +80,21 @@ function SignupScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
+  },
+  txt: {
+    fontSize: wp("4.8%"),
+    color: "#181725",
+    marginLeft: wp("10%"),
+    marginTop: wp("8%"),
+    fontFamily: "SF-Pro-Display-Semibold",
+  },
+  code: {
+    fontSize: wp("4%"),
+    color: "#7C7C7C",
+    fontFamily: "SF-Pro-Display-Semibold",
+    marginLeft: wp("10%"),
+    marginTop: wp("3%"),
   },
   box: {
     height: hp("5%"),
@@ -113,6 +105,12 @@ const styles = StyleSheet.create({
     margin: wp("2%"),
     borderRadius: wp("10%") / 6,
     borderColor: "#787878",
+  },
+  btn: {
+    height: hp("5%"),
+    width: wp("40%"),
+    marginLeft: wp("5%"),
+    marginTop: wp("8%"),
   },
 });
 

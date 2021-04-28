@@ -27,7 +27,14 @@ function Card1({ status, dis, loc }) {
         />
 
         <View style={{ flexDirection: "column", marginLeft: 30 }}>
-          <Text style={{ fontSize: wp("6%"), right: wp("6%"), color: "black" }}>
+          <Text
+            style={{
+              fontSize: wp("6%"),
+              right: wp("6%"),
+              color: "black",
+              fontFamily: "SF-Pro-Display-Regular",
+            }}
+          >
             PlugIn India
           </Text>
           <View style={{ flexDirection: "row" }}>
@@ -69,10 +76,11 @@ function Card1({ status, dis, loc }) {
 
       <Text
         style={{
-          fontSize: wp("2.5%"),
+          fontSize: wp("2.6%"),
           color: "#484848",
           marginLeft: wp("2%"),
           marginTop: hp("1.2%"),
+          fontFamily: "SF-Pro-Display-Regular",
         }}
       >
         {loc}

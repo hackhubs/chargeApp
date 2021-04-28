@@ -44,6 +44,7 @@ function HostScreen(props) {
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
+    backgroundColor: "white",
   },
   heading: {
     fontSize: wp("11%"),
@@ -51,14 +52,15 @@ const styles = StyleSheet.create({
     marginLeft: wp("8%"),
     marginTop: wp("16%"),
     marginRight: wp("26%"),
-    fontWeight: "bold",
     lineHeight: wp("13%"),
+    fontFamily: "SF-Pro-Display-Semibold",
   },
   txt: {
     marginLeft: wp("10%"),
     marginTop: wp("14%"),
     color: "#7C7C7C",
     fontSize: wp("4%"),
+    fontFamily: "SF-Pro-Display-Semibold",
   },
 });
 

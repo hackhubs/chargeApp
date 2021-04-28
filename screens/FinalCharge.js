@@ -51,15 +51,21 @@ function FinalCharge(props) {
               <View>
                 <Text
                   style={{
-                    fontWeight: "bold",
                     color: "white",
                     fontSize: wp("5%"),
                     marginTop: wp("2%"),
+                    fontFamily: "SF-Pro-Display-Medium",
                   }}
                 >
                   Energy
                 </Text>
-                <Text style={{ fontSize: wp("3.5%"), color: "white" }}>
+                <Text
+                  style={{
+                    fontSize: wp("3.5%"),
+                    color: "white",
+                    fontFamily: "SF-Pro-Display-Regular",
+                  }}
+                >
                   Consumed
                 </Text>
               </View>
@@ -68,7 +74,7 @@ function FinalCharge(props) {
               style={{
                 fontSize: wp("8%"),
                 color: "white",
-                fontWeight: "bold",
+                fontFamily: "SF-Pro-Display-Semibold",
                 padding: wp("1%"),
                 marginTop: wp("4%"),
                 marginLeft: wp("3%"),
@@ -92,7 +98,7 @@ function FinalCharge(props) {
               <View>
                 <Text
                   style={{
-                    fontWeight: "bold",
+                    fontFamily: "SF-Pro-Display-Medium",
                     color: "white",
                     fontSize: wp("5%"),
                     marginTop: wp("2%"),
@@ -100,7 +106,13 @@ function FinalCharge(props) {
                 >
                   Amount
                 </Text>
-                <Text style={{ fontSize: wp("3.5%"), color: "white" }}>
+                <Text
+                  style={{
+                    fontSize: wp("3.5%"),
+                    color: "white",
+                    fontFamily: "SF-Pro-Display-Regular",
+                  }}
+                >
                   Payable
                 </Text>
               </View>
@@ -109,7 +121,7 @@ function FinalCharge(props) {
               style={{
                 fontSize: wp("8%"),
                 color: "white",
-                fontWeight: "bold",
+                fontFamily: "SF-Pro-Display-Semibold",
                 padding: wp("1%"),
                 marginTop: wp("4%"),
                 marginLeft: wp("4%"),
@@ -125,17 +137,19 @@ function FinalCharge(props) {
             color: "#3D3D3D",
             marginTop: wp("4%"),
             marginLeft: wp("6%"),
+            fontFamily: "SF-Pro-Display-Medium",
           }}
         >
           14/03/21, 7:45 AM
         </Text>
         <Text
           style={{
-            fontSize: wp("3.5%"),
+            fontSize: wp("3.8%"),
             color: "#484848",
             marginTop: wp("2%"),
             marginRight: wp("20%"),
             marginLeft: wp("6%"),
+            fontFamily: "SF-Pro-Display-Regular",
           }}
         >
           Rohini Community Charging Station, B-5/30, New Delhi - 110034
@@ -160,12 +174,23 @@ function FinalCharge(props) {
             />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Image
-            source={require("../images/continue.png")}
-            style={styles.btn3}
-          />
-        </TouchableOpacity>
+        <View
+          style={{
+            marginLeft: wp("20%"),
+            marginTop: wp("16%"),
+            width: wp("60%"),
+          }}
+        >
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => console.log("continue")}
+          >
+            <Image
+              source={require("../images/continue.png")}
+              style={styles.btn3}
+            />
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </ScrollView>
   );
@@ -211,9 +236,7 @@ const styles = StyleSheet.create({
   btn3: {
     width: wp("60%"),
     height: hp("6%"),
-    marginLeft: wp("20%"),
     borderRadius: wp("6%") / 2,
-    marginTop: wp("16%"),
   },
 });
 

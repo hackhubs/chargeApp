@@ -30,12 +30,12 @@ const AppNavigator = () => (
         shadowColor: "#000",
         shadowOffset: {
           width: 0,
-          height: 6,
+          height: 4,
         },
-        shadowOpacity: 0.39,
-        shadowRadius: 8.3,
+        shadowOpacity: 0.32,
+        shadowRadius: 5.46,
 
-        elevation: 13,
+        elevation: 9,
       },
     }}
   >

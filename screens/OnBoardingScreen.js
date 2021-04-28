@@ -13,11 +13,12 @@ const dots = ({ selected }) => {
   return (
     <View
       style={{
-        width: wp("2.6%"),
-        height: hp("1.5%"),
+        width: wp("1.8%"),
+        height: hp("1%"),
         marginHorizontal: 5,
         backgroundColor,
         marginBottom: 250,
+        marginTop: -wp("8%"),
         borderRadius: wp("2.6%") / 2,
       }}
     />
@@ -29,7 +30,7 @@ const Next = ({ ...props }) => (
     <Image source={require("../images/next.png")} style={styles.nextImage} />
   </TouchableHighlight>
 );
-function OnBoardingScreen2({ navigation }) {
+function OnBoardingScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Onboarding
@@ -37,7 +38,13 @@ function OnBoardingScreen2({ navigation }) {
         showSkip={false}
         bottomBarHighlight={false}
         NextButtonComponent={Next}
-        titleStyles={{ fontSize: 30, fontWeight: "bold", bottom: 200 }} // set default color for the title
+        titleStyles={{
+          fontSize: wp("7%"),
+          fontFamily: "Poppins-SemiBold",
+          bottom: 200,
+          color: "#012E41",
+          marginTop: wp("2%"),
+        }}
         onDone={() => navigation.replace("LoginPage")}
         pages={[
           {
@@ -90,15 +97,18 @@ function OnBoardingScreen2({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
   },
   next: {
     marginBottom: 70,
     width: wp("80%"),
-    marginRight: 30,
+    marginRight: wp("12%"),
   },
   nextImage: {
-    width: wp("80%"),
-    height: hp("8%"),
+    width: wp("85%"),
+    height: hp("7%"),
+    marginTop: -wp("10%"),
+    borderRadius: wp("60%") / 20,
   },
   image: {
     width: wp("100%"),
@@ -107,4 +117,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OnBoardingScreen2;
+export default OnBoardingScreen;

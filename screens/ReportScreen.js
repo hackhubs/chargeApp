@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     marginTop: wp("6%"),
     marginLeft: wp("6%"),
     fontWeight: "bold",
+    fontFamily: "SF-Pro-Display-Black",
   },
   subtitle: {
     fontSize: wp("3%"),
@@ -87,12 +88,14 @@ const styles = StyleSheet.create({
     marginRight: wp("6%"),
     marginLeft: wp("6%"),
     lineHeight: wp("4%"),
+    fontFamily: "OpenSans-Regular",
   },
   name: {
     marginLeft: wp("6%"),
     fontSize: wp("3%"),
     color: "#000000",
     marginTop: wp("4%"),
+    fontFamily: "OpenSans-Regular",
   },
   input: {
     marginLeft: wp("6%"),

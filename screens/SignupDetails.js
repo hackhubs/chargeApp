@@ -31,41 +31,15 @@ function SignupDetails(props) {
         style={{ width: wp("60%"), height: hp("10%"), marginLeft: wp("10%") }}
       />
       <View style={{ marginTop: wp("8%"), marginLeft: wp("10%") }}>
-        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>Username</Text>
-        <TextInput
-          placeholder="Enter Name"
-          style={{
-            color: "black",
-            borderBottomWidth: 1,
-            borderBottomColor: "#E2E2E2",
-            marginRight: wp("10%"),
-          }}
-        />
+        <Text style={styles.txt}>Username</Text>
+        <TextInput placeholder="Enter Name" style={styles.input} />
       </View>
 
       <View style={{ marginTop: wp("4%"), marginLeft: wp("10%") }}>
-        <Text style={{ fontSize: wp("4%"), color: "#7C7C7C" }}>
-          Phone Number
-        </Text>
-        <TextInput
-          placeholder="Enter Phone Number"
-          style={{
-            color: "#030303",
-            borderBottomWidth: 1,
-            borderBottomColor: "#E2E2E2",
-            marginRight: wp("10%"),
-          }}
-        />
+        <Text style={styles.txt}>Phone Number</Text>
+        <TextInput placeholder="Enter Phone Number" style={styles.input} />
       </View>
-      <Text
-        style={{
-          marginTop: wp("6%"),
-          marginLeft: wp("10%"),
-          fontSize: wp("3.3%"),
-          marginRight: wp("3%"),
-          color: "#7C7C7C",
-        }}
-      >
+      <Text style={styles.terms}>
         By continuing you agree to our{" "}
         <Text style={{ color: "#069DFF" }}>Terms of Service </Text>
         and <Text style={{ color: "#069DFF" }}>Privacy Policy.</Text>
@@ -84,6 +58,27 @@ function SignupDetails(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white",
+  },
+  txt: {
+    fontSize: wp("4%"),
+    color: "#7C7C7C",
+    fontFamily: "SF-Pro-Display-Semibold",
+  },
+  input: {
+    color: "#030303",
+    borderBottomWidth: 1,
+    borderBottomColor: "#E2E2E2",
+    marginRight: wp("10%"),
+    fontFamily: "SF-Pro-Display-Regular",
+  },
+  terms: {
+    marginTop: wp("6%"),
+    marginLeft: wp("10%"),
+    fontSize: wp("3.4%"),
+    marginRight: wp("8%"),
+    color: "#7C7C7C",
+    fontFamily: "SF-Pro-Display-Regular",
   },
 });
 

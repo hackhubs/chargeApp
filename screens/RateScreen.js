@@ -21,7 +21,10 @@ function RateScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: "white",
+    flex: 1,
+  },
 });
 
 export default RateScreen;

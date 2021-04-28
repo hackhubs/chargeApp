@@ -20,47 +20,63 @@ const ChargingStatus = ({ navigation }) => {
     <SafeAreaView style={styles.cont}>
       <View>
         <ImageBackground
-          source={require("../images/charge.png")}
-          style={{ width: "100%", height: 150 }}
+          source={require("../images/chargeStatus.png")}
+          style={{ width: "100%", height: hp("15%") }}
           resizeMode="cover"
         >
           <View
             style={{
               position: "absolute",
-              top: 0,
-              left: 0,
+              top: 30,
+              left: 12,
               right: 0,
               bottom: 0,
-              justifyContent: "center",
-              alignItems: "center",
+              width: wp("10%"),
             }}
           >
-            <Text style={{ fontSize: 34, color: "white" }}>
-              Charging Station
-            </Text>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              onPress={() => console.log("status")}
+            >
+              <Image
+                source={require("../images/Back.png")}
+                style={{
+                  height: hp("3%"),
+                  width: wp("10%"),
+                }}
+              />
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 30 }}>
         <View
-          style={{ flexDirection: "column", marginLeft: 30, marginRight: 60 }}
+          style={{
+            flexDirection: "column",
+            marginLeft: wp("10%"),
+            marginRight: wp("10%"),
+          }}
         >
           <Text style={styles.text}>Energy</Text>
           <Text style={styles.subText}>1.2kWh</Text>
         </View>
-        <View style={{ flexDirection: "column", marginLeft: 80 }}>
+        <View style={{ flexDirection: "column", marginLeft: wp("15%") }}>
           <Text style={styles.text}>Price</Text>
           <Text style={styles.subText}>{"\u20B9"} 8.6</Text>
         </View>
       </View>
       <View style={{ flexDirection: "row" }}>
         <View
-          style={{ flexDirection: "column", marginLeft: 30, marginRight: 70 }}
+          style={{
+            flexDirection: "column",
+            marginLeft: wp("10%"),
+            marginRight: wp("10%"),
+          }}
         >
           <Text style={styles.text}>Voltage</Text>
           <Text style={styles.subText}>248V</Text>
         </View>
-        <View style={{ flexDirection: "column", marginLeft: 80 }}>
+        <View style={{ flexDirection: "column", marginLeft: wp("20%") }}>
           <Text style={styles.text}>Current</Text>
           <Text style={styles.subText}>7.2 Amp</Text>
         </View>
@@ -103,11 +119,18 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   text: {
-    fontSize: 20,
+    fontSize: wp("5%"),
+    fontFamily: "SF-Pro-Display-Regular",
+    color: "#031925",
   },
   subText: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: wp("5.6%"),
+    marginTop: wp("2%"),
+    backgroundColor: "#F4F4F4",
+    borderRadius: wp("6%") / 4,
+    padding: wp("3%"),
+    fontFamily: "SF-Pro-Display-Semibold",
+    color: "#3D3D3D",
   },
   cont3: {
     alignItems: "center",

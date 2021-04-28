@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginTop: wp("10%"),
     fontSize: wp("4.3%"),
     color: "black",
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Display-Semibold",
   },
   input: {
     marginLeft: wp("10%"),

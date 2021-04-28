@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     color: "#000000",
     marginTop: wp("6%"),
     marginLeft: wp("6%"),
-    fontWeight: "bold",
+    fontFamily: "SF-Pro-Display-Bold",
   },
   subtitle: {
     fontSize: wp("3%"),
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     marginRight: wp("6%"),
     marginLeft: wp("6%"),
     lineHeight: wp("4%"),
+    fontFamily: "SF-Pro-Display-Regular",
   },
   name: {
     marginLeft: wp("6%"),
