@@ -16,16 +16,10 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
-function Card1({ status, dis, loc }) {
+function Recent({ status, dis, loc }) {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row" }}>
-        <Image
-          source={require("../images/card-charge.png")}
-          style={{ height: hp("8%"), width: wp("14%") }}
-          resizeMode="contain"
-        />
-
         <View style={{ flexDirection: "column", marginLeft: 30 }}>
           <Text style={{ fontSize: wp("6%"), right: wp("6%"), color: "black" }}>
             PlugIn India
@@ -136,4 +130,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Card1;
+export default Recent;

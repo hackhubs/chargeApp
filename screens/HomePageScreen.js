@@ -14,12 +14,11 @@ import {
 // import { Searchbar } from "react-native-paper";
 import { Feather } from "@expo/vector-icons";
 import { Card, Button, Icon } from "react-native-elements";
-import CardScreen from "../components/CardScreen";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import RecentCard from "../components/RecentCard";
+import Recent from "../components/Recent";
 import Card1 from "../components/Card1";
 
 const details = [
@@ -66,8 +65,8 @@ const recentDetails = [
 
 const HomePageScreen = () => {
   return (
-    <ScrollView>
-      <SafeAreaView style={styles.cont}>
+    <SafeAreaView style={styles.cont}>
+      <ScrollView style={styles.cont}>
         <View>
           <ImageBackground
             source={require("../images/chargeScreen1.png")}
@@ -166,6 +165,11 @@ const HomePageScreen = () => {
             />
           </ScrollView>
         </View>
+        <View flexDirection="row" style={{ marginTop: wp("3%") }}>
+          <View style={styles.activeCircle}></View>
+          <View style={styles.inactiveCircle}></View>
+          <View style={styles.inactiveCircle}></View>
+        </View>
         <View>
           <Text
             style={{
@@ -184,21 +188,20 @@ const HomePageScreen = () => {
               keyExtractor={(details) => details.id}
               horizontal={true}
               renderItem={({ item }) => (
-                <RecentCard days={item.days} dis={item.dis} loc={item.loc} />
+                <Recent days={item.days} dis={item.dis} loc={item.loc} />
               )}
             />
           </ScrollView>
         </View>
-      </SafeAreaView>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   cont: {
     flex: 1,
-    // marginBottom: 50,
-    backgroundColor: "#F0ECEC",
+    backgroundColor: "#fcfcfc",
   },
   paragraph: {
     margin: 24,
@@ -206,6 +209,22 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#34495e",
+  },
+  activeCircle: {
+    borderRadius: wp("7%") / 2,
+    width: wp("2%"),
+    height: hp("1%"),
+    backgroundColor: "#069DFF",
+    marginLeft: wp("40%"),
+    marginTop: wp("3%"),
+  },
+  inactiveCircle: {
+    borderRadius: wp("7%") / 2,
+    width: wp("2%"),
+    height: hp("1%"),
+    backgroundColor: "#DBDBDB",
+    marginLeft: wp("4%"),
+    marginTop: wp("3%"),
   },
 });
 

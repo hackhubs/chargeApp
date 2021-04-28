@@ -21,21 +21,25 @@ import EditProfile from "./screens/EditProfile";
 import ReportScreen from "./screens/ReportScreen";
 import ProfileNavigator from "./navigation/ProfileNavigator";
 import FailedPayment from "./screens/FailedPayment";
+import HostScreen from "./screens/HostScreen";
+import RegisterHost from "./screens/RegisterHost";
+import BecomeHost from "./screens/BecomeHost";
 
 export default function App() {
-  // const Stack = createStackNavigator();
+  const Stack = createStackNavigator();
 
   return (
-    <FailedPayment />
-    // <NavigationContainer>
-    // <Stack.Navigator
-    // screenOptions={{
-    // headerShown: false,
-    // }}
-    // >
-    // <Stack.Screen name="AppBottom" component={AppNavigator} />
-    // {/* <Stack.Screen name="Edit" component={EditProfile} /> */}
-    // </Stack.Navigator>
-    // </NavigationContainer>
+    // <BecomeHost />
+    // <RegisterHost />
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="AppBottom" component={AppNavigator} />
+        <Stack.Screen name="Edit" component={EditProfile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
