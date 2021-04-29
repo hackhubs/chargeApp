@@ -13,19 +13,19 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import StationCard from "../components/StationCard";
-import DummyData from "../Data/DummyData";
+import SessionCard from "../components/SessionCard";
+import DataSession from "../Data/DataSession";
 
-function StationScreen(props) {
+function SessionScreen(props) {
   const header = () => {
     return (
       <View>
-        <Image style={styles.img} source={require("../images/stations.png")} />
+        <Image style={styles.img} source={require("../images/session.png")} />
         <View
           style={{
             position: "absolute",
-            left: 15,
-            top: 30,
+            left: 10,
+            top: 20,
           }}
         >
           <TouchableOpacity
@@ -47,11 +47,11 @@ function StationScreen(props) {
       <View>
         <FlatList
           keyExtractor={(item) => item.id.toString()}
-          data={DummyData}
+          data={DataSession}
           ListHeaderComponent={header}
           stickyHeaderIndices={[0]}
           renderItem={({ item }) => (
-            <StationCard status={item.status} dis={item.dis} loc={item.loc} />
+            <SessionCard status={item.status} days={item.days} loc={item.loc} />
           )}
         />
       </View>
@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   img: {
-    height: hp("16%"),
+    height: hp("22%"),
     width: wp("100%"),
   },
 });
 
-export default StationScreen;
+export default SessionScreen;

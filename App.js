@@ -26,12 +26,13 @@ import RegisterHost from "./screens/RegisterHost";
 import BecomeHost from "./screens/BecomeHost";
 import QRScreen from "./screens/QRScreen";
 import StationScreen from "./screens/StationScreen";
+import SessionScreen from "./screens/SessionScreen";
 
 export default function App() {
   // const Stack = createStackNavigator();
 
   return (
-    <StationScreen />
+    <SessionScreen />
     // <ChargingDetails />
     // <HomePageScreen />
     // <QRScreen />
