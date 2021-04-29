@@ -47,13 +47,13 @@ const recentDetails = [
     id: "1",
     days: "3",
     dis: "1.3",
-    loc: "Rohini Community Charging Station,....",
+    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
   {
     id: "2",
     days: "3",
     dis: "12.4",
-    loc: "Rohini Community Charging Station,...",
+    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
   },
   {
     id: "3",
@@ -63,14 +63,14 @@ const recentDetails = [
   },
 ];
 
-const HomePageScreen = () => {
+const HomePageScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.cont}>
       <ScrollView style={styles.cont}>
         <View>
           <ImageBackground
             source={require("../images/chargeScreen1.png")}
-            style={{ width: wp("100%"), height: hp("20%") }}
+            style={{ width: wp("100%"), height: hp("18%") }}
             resizeMode="cover"
           >
             <View
@@ -133,7 +133,7 @@ const HomePageScreen = () => {
                 fontFamily: "SF-Pro-Display-Semibold",
                 color: "#181725",
                 fontSize: wp("5%"),
-                marginTop: wp("3%"),
+                marginTop: wp("2%"),
                 marginLeft: wp("5%"),
               }}
             >
@@ -142,7 +142,7 @@ const HomePageScreen = () => {
             <TouchableOpacity
               onPress={() => console.log("more")}
               activeOpacity={0.5}
-              style={{ marginLeft: wp("10%"), marginTop: wp("4%") }}
+              style={{ marginLeft: wp("10%"), marginTop: wp("2%") }}
             >
               <Image
                 style={{
@@ -155,7 +155,7 @@ const HomePageScreen = () => {
               />
             </TouchableOpacity>
           </View>
-          <ScrollView>
+          <ScrollView style={{ marginTop: -wp("2%") }}>
             <FlatList
               data={details}
               keyExtractor={(details) => details.id}
@@ -166,25 +166,44 @@ const HomePageScreen = () => {
             />
           </ScrollView>
         </View>
-        <View flexDirection="row" style={{ marginTop: wp("3%") }}>
+        <View flexDirection="row" style={{ marginTop: wp("1%") }}>
           <View style={styles.activeCircle}></View>
           <View style={styles.inactiveCircle}></View>
           <View style={styles.inactiveCircle}></View>
         </View>
         <View>
-          <Text
-            style={{
-              fontSize: 22,
-              marginTop: 15,
-              marginLeft: 30,
-              marginTop: 20,
-              fontFamily: "SF-Pro-Display-Semibold",
-              color: "#181725",
-            }}
-          >
-            Recent Sessions
-          </Text>
-          <ScrollView>
+          <View flexDirection="row">
+            <Text
+              style={{
+                fontSize: 22,
+                marginTop: 15,
+                marginLeft: 30,
+                marginTop: 20,
+                fontFamily: "SF-Pro-Display-Semibold",
+                color: "#181725",
+              }}
+            >
+              Recent Sessions
+            </Text>
+
+            <TouchableOpacity
+              onPress={() => console.log("more")}
+              activeOpacity={0.5}
+              style={{ marginLeft: wp("10%"), marginTop: wp("6%") }}
+            >
+              <Image
+                style={{
+                  width: wp("20%"),
+                  height: hp("3%"),
+
+                  borderRadius: wp("6%") / 2,
+                }}
+                source={require("../images/more.png")}
+              />
+            </TouchableOpacity>
+          </View>
+
+          <ScrollView style={{ marginTop: -wp("2%") }}>
             <FlatList
               data={recentDetails}
               keyExtractor={(details) => details.id}
@@ -194,6 +213,11 @@ const HomePageScreen = () => {
               )}
             />
           </ScrollView>
+          <View flexDirection="row" style={{ marginTop: wp("1%") }}>
+            <View style={styles.activeCircle}></View>
+            <View style={styles.inactiveCircle}></View>
+            <View style={styles.inactiveCircle}></View>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -217,7 +241,7 @@ const styles = StyleSheet.create({
     width: wp("2%"),
     height: hp("1%"),
     backgroundColor: "#069DFF",
-    marginLeft: wp("40%"),
+    marginLeft: wp("42%"),
     marginTop: wp("3%"),
   },
   inactiveCircle: {
@@ -225,7 +249,7 @@ const styles = StyleSheet.create({
     width: wp("2%"),
     height: hp("1%"),
     backgroundColor: "#DBDBDB",
-    marginLeft: wp("4%"),
+    marginLeft: wp("3%"),
     marginTop: wp("3%"),
   },
 });

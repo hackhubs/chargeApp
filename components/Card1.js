@@ -90,11 +90,11 @@ function Card1({ status, dis, loc }) {
           <Image
             source={require("../images/navigate.png")}
             style={{
-              height: hp("7%"),
-              width: wp("18%"),
+              height: hp("8%"),
+              width: wp("20%"),
               borderRadius: hp("4%") / 4,
               marginLeft: wp("7%"),
-              marginTop: -wp("4%"),
+              marginTop: -wp("2%"),
             }}
             resizeMode="contain"
           />
@@ -103,11 +103,11 @@ function Card1({ status, dis, loc }) {
           <Image
             source={require("../images/charge_now.png")}
             style={{
-              height: hp("7%"),
-              width: wp("18%"),
+              height: hp("8%"),
+              width: wp("20%"),
               borderRadius: hp("4%") / 4,
               marginLeft: wp("12%"),
-              marginTop: -wp("4%"),
+              marginTop: -wp("2%"),
             }}
             resizeMode="contain"
           />
@@ -128,8 +128,8 @@ const styles = StyleSheet.create({
     paddingBottom: wp("5%"),
     marginRight: wp("2%"),
     marginTop: hp("3%"),
-    height: hp("18%"),
-    width: wp("85%"),
+    height: hp("20%"),
+    width: wp("90%"),
     left: wp("5%"),
     backgroundColor: "white",
     shadowColor: "#000",

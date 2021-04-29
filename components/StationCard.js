@@ -1,42 +1,65 @@
 import React from "react";
 import {
-  SafeAreaView,
-  StyleSheet,
   View,
-  TextInput,
+  StyleSheet,
   Text,
+  Image,
   ImageBackground,
   TouchableOpacity,
-  Image,
-  ScrollView,
-  Platform,
 } from "react-native";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
-function Recent({ days, dis, loc }) {
+function StationCard({ status, dis, loc }) {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row" }}>
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.heading}>PlugIn India</Text>
           <View style={{ flexDirection: "column" }}>
-            <View style={{ flexDirection: "row", marginTop: wp("2%") }}>
+            <View style={{ flexDirection: "row", marginTop: wp("1.4%") }}>
               <Image source={require("../images/tick.png")} />
-              <Text style={styles.status}>Available</Text>
+              <Text style={styles.status}>{status}</Text>
             </View>
             <Text style={styles.loc}>{loc}</Text>
           </View>
         </View>
-        <View style={{ flexDirection: "column" }}>
-          <View style={{ flexDirection: "row" }}>
-            <Text style={styles.subtitle}>{"\u20B9"} 500</Text>
-            <Text style={styles.subtitle2}>7.4 kwh</Text>
-          </View>
-          <Text style={styles.txt}>Last Charged: {days} days ago</Text>
+        <View style={{ flexDirection: "column", marginTop: -wp("1%") }}>
+          <Text style={styles.txt}>Distance: {dis} Km away</Text>
           <Text style={styles.txt2}>Operator: veCharge Community</Text>
+        </View>
+        <View style={{ flexDirection: "row", marginTop: wp("3%") }}>
+          <TouchableOpacity
+            activeOpacity={0.4}
+            style={{ marginLeft: -wp("38%"), marginTop: wp("10%") }}
+          >
+            <Image
+              source={require("../images/navigate.png")}
+              style={{
+                height: hp("5%"),
+                width: wp("15%"),
+                borderRadius: hp("4%") / 4,
+              }}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.4}
+            style={{ marginLeft: -wp("20%"), marginTop: wp("10%") }}
+          >
+            <Image
+              source={require("../images/charge_now.png")}
+              style={{
+                height: hp("5%"),
+                width: wp("15%"),
+
+                borderRadius: hp("4%") / 4,
+              }}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -53,8 +76,8 @@ const styles = StyleSheet.create({
     paddingTop: wp("3%"),
     paddingBottom: wp("5%"),
     marginRight: wp("2%"),
-    marginTop: hp("3%"),
-    height: hp("20%"),
+    marginVertical: hp("1%"),
+    height: hp("14%"),
     width: wp("90%"),
     left: wp("5%"),
     backgroundColor: "white",
@@ -70,8 +93,8 @@ const styles = StyleSheet.create({
   heading: {
     fontFamily: "SF-Pro-Display-Medium",
     color: "black",
-    fontSize: wp("5.6%"),
-    marginTop: wp("1%"),
+    fontSize: wp("5.7%"),
+    marginTop: -wp("2%"),
   },
   status: {
     color: "#333333",
@@ -81,7 +104,7 @@ const styles = StyleSheet.create({
     color: "#484848",
     fontFamily: "SF-Pro-Display-Regular",
     fontSize: wp("2.5%"),
-    marginTop: wp("3%"),
+    marginTop: wp("2%"),
     marginRight: wp("38%"),
   },
   subtitle: {
@@ -111,7 +134,7 @@ const styles = StyleSheet.create({
   },
   txt: {
     marginTop: wp("3%"),
-    marginLeft: -wp("30%"),
+    marginLeft: -wp("32%"),
     color: "black",
     fontFamily: "SF-Pro-Display-Medium",
     fontSize: wp("2.6%"),
@@ -125,4 +148,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Recent;
+export default StationCard;
