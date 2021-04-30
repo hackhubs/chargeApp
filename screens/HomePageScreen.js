@@ -20,48 +20,9 @@ import {
 } from "react-native-responsive-screen";
 import Recent from "../components/Recent";
 import Card1 from "../components/Card1";
-
-const details = [
-  {
-    id: "1",
-    status: "Available",
-    dis: "1.3",
-    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
-  },
-  {
-    id: "2",
-    status: "Available",
-    dis: "12.4",
-    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
-  },
-  {
-    id: "3",
-    status: "Available",
-    dis: "1.3",
-    loc: "Rohini Community Charging Station,..",
-  },
-];
-
-const recentDetails = [
-  {
-    id: "1",
-    days: "3",
-    dis: "1.3",
-    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
-  },
-  {
-    id: "2",
-    days: "3",
-    dis: "12.4",
-    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
-  },
-  {
-    id: "3",
-    days: "3",
-    dis: "1.3",
-    loc: "Rohini Community Charging Station, B-5/30, 2nd Floor, Delhi",
-  },
-];
+import Carousel from "../components/Carousel";
+import Details from "../Data/Details";
+import RecentDetails from "../Data/RecentDetails";
 
 const HomePageScreen = ({ navigation }) => {
   return (
@@ -155,7 +116,8 @@ const HomePageScreen = ({ navigation }) => {
               />
             </TouchableOpacity>
           </View>
-          <ScrollView style={{ marginTop: -wp("2%") }}>
+          <Carousel data={Details} />
+          {/* <ScrollView style={{ marginTop: -wp("2%") }}>
             <FlatList
               data={details}
               keyExtractor={(details) => details.id}
@@ -164,13 +126,13 @@ const HomePageScreen = ({ navigation }) => {
                 <Card1 status={item.status} dis={item.dis} loc={item.loc} />
               )}
             />
-          </ScrollView>
+          </ScrollView> */}
         </View>
-        <View flexDirection="row" style={{ marginTop: wp("1%") }}>
+        {/* <View flexDirection="row" style={{ marginTop: wp("1%") }}>
           <View style={styles.activeCircle}></View>
           <View style={styles.inactiveCircle}></View>
           <View style={styles.inactiveCircle}></View>
-        </View>
+        </View> */}
         <View>
           <View flexDirection="row">
             <Text
@@ -203,11 +165,12 @@ const HomePageScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
 
-          <ScrollView style={{ marginTop: -wp("2%") }}>
+          {/* <ScrollView style={{ marginTop: -wp("2%") }}>
             <FlatList
-              data={recentDetails}
-              keyExtractor={(details) => details.id}
+              data={RecentDetails}
+              keyExtractor={(RecentDetails) => RecentDetails.id}
               horizontal={true}
+              showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <Recent days={item.days} dis={item.dis} loc={item.loc} />
               )}
@@ -217,7 +180,7 @@ const HomePageScreen = ({ navigation }) => {
             <View style={styles.activeCircle}></View>
             <View style={styles.inactiveCircle}></View>
             <View style={styles.inactiveCircle}></View>
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     </SafeAreaView>

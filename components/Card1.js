@@ -134,13 +134,13 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     shadowColor: "#000",
     shadowOffset: {
-      width: 0,
+      width: 1,
       height: 2,
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
 
-    elevation: 4,
+    elevation: 6,
   },
 });
 
