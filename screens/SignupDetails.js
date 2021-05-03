@@ -6,11 +6,13 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  ImageBackground,
 } from "react-native";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { SignupBtn } from 'svg';
 
 function SignupDetails(props) {
   return (
@@ -44,13 +46,17 @@ function SignupDetails(props) {
         <Text style={{ color: "#069DFF" }}>Terms of Service </Text>
         and <Text style={{ color: "#069DFF" }}>Privacy Policy.</Text>
       </Text>
-      <TouchableOpacity activeOpacity={0.6}>
-        <Image
-          source={require("../images/signupBtn.png")}
-          resizeMode="contain"
-          style={{ width: wp("60%"), height: hp("18%"), marginLeft: wp("20%") }}
-        />
-      </TouchableOpacity>
+      <View>
+        <TouchableOpacity activeOpacity={0.6}>
+
+          <SignupBtn
+            width={wp("60%")}
+            height={hp("18%")}
+            marginLeft={wp("20%")}
+          />
+
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

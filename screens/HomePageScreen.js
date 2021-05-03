@@ -12,79 +12,85 @@ import {
   FlatList,
 } from "react-native";
 // import { Searchbar } from "react-native-paper";
-import { Feather } from "@expo/vector-icons";
-import { Card, Button, Icon } from "react-native-elements";
+// import { Feather } from "@expo/vector-icons";
+// import { Card, Button, Icon } from "react-native-elements";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import Recent from "../components/Recent";
-import Card1 from "../components/Card1";
 import Carousel from "../components/Carousel";
 import Details from "../Data/Details";
 import RecentDetails from "../Data/RecentDetails";
+import CarouselRecent from '../components/CarouselRecent'
+import { HomeScreen, Host } from 'svg'
+import { BoxShadow } from 'react-native-shadow'
 
 const HomePageScreen = ({ navigation }) => {
+
+  const shadowOpt = {
+    width: wp("65%"),
+    height: hp("6.3%"),
+    color: "#069DFF",
+    border: 12,
+    // radius: 6,
+    opacity: 0.2,
+    x: 6,
+    y: 20,
+    style: { marginBottom: hp("5%") }
+
+
+  }
+
   return (
     <SafeAreaView style={styles.cont}>
       <ScrollView style={styles.cont}>
         <View>
-          <ImageBackground
-            source={require("../images/chargeScreen1.png")}
-            style={{ width: wp("100%"), height: hp("18%") }}
-            resizeMode="cover"
+
+          <HomeScreen
+            width={wp("100%")}
+            height={hp("22%")}
+          />
+
+          <View
+            style={{
+              position: "absolute",
+              top: 0,
+              left: wp("5%"),
+              right: 0,
+              bottom: 0,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            <View
+            <Text
               style={{
-                position: "absolute",
-                top: 0,
-                left: wp("5%"),
-                right: 0,
-                bottom: 0,
-                justifyContent: "center",
-                alignItems: "center",
+                fontSize: 28,
+                color: "white",
+                marginRight: wp("47%"),
+                marginBottom: wp("15%"),
+                fontFamily: "SF-Pro-Text-Bold",
               }}
             >
-              <Text
-                style={{
-                  fontSize: 28,
-                  color: "white",
-                  marginRight: wp("47%"),
-                  marginBottom: wp("20%"),
-                  fontFamily: "SF-Pro-Text-Bold",
-                }}
-              >
-                Hello Moksh,
-              </Text>
-            </View>
-          </ImageBackground>
+              Hello Moksh,
+            </Text>
+          </View>
+
         </View>
-        {/* <View
-          style={{
-            marginTop: -50,
-            marginLeft: 10,
-            marginRight: 10,
-          }}
-        > */}
-        {/* <Searchbar
-            placeholder="Search for Charging Ports"
-            icon={<Feather name="search" size={40} color="#D2D2D2" />}
-            iconColor="#D2D2D2"
-            style={{ borderRadius: 25 }}
-          /> */}
-        {/* </View> */}
+
+
         <View>
           <TouchableOpacity
             activeOpacity={0.6}
-            style={{ marginLeft: wp("15%"), marginTop: -wp("4%") }}
+            style={{ marginLeft: wp("15%"), marginTop: -wp("6%") }}
           >
-            <Image
-              source={require("../images/host.png")}
-              style={{
-                width: wp("70%"),
-                height: hp("10%"),
-              }}
-            />
+            <BoxShadow setting={shadowOpt}>
+
+
+              <Host
+                width={wp("70%")}
+                height={hp("12%")}
+              />
+            </BoxShadow>
           </TouchableOpacity>
         </View>
         <View>
@@ -119,7 +125,7 @@ const HomePageScreen = ({ navigation }) => {
           <Carousel data={Details} />
           {/* <ScrollView style={{ marginTop: -wp("2%") }}>
             <FlatList
-              data={details}
+              data={Details}
               keyExtractor={(details) => details.id}
               horizontal={true}
               renderItem={({ item }) => (
@@ -128,11 +134,7 @@ const HomePageScreen = ({ navigation }) => {
             />
           </ScrollView> */}
         </View>
-        {/* <View flexDirection="row" style={{ marginTop: wp("1%") }}>
-          <View style={styles.activeCircle}></View>
-          <View style={styles.inactiveCircle}></View>
-          <View style={styles.inactiveCircle}></View>
-        </View> */}
+
         <View>
           <View flexDirection="row">
             <Text
@@ -146,7 +148,7 @@ const HomePageScreen = ({ navigation }) => {
               }}
             >
               Recent Sessions
-            </Text>
+           </Text>
 
             <TouchableOpacity
               onPress={() => console.log("more")}
@@ -164,26 +166,13 @@ const HomePageScreen = ({ navigation }) => {
               />
             </TouchableOpacity>
           </View>
+          <CarouselRecent data={RecentDetails} />
 
-          {/* <ScrollView style={{ marginTop: -wp("2%") }}>
-            <FlatList
-              data={RecentDetails}
-              keyExtractor={(RecentDetails) => RecentDetails.id}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              renderItem={({ item }) => (
-                <Recent days={item.days} dis={item.dis} loc={item.loc} />
-              )}
-            />
-          </ScrollView>
-          <View flexDirection="row" style={{ marginTop: wp("1%") }}>
-            <View style={styles.activeCircle}></View>
-            <View style={styles.inactiveCircle}></View>
-            <View style={styles.inactiveCircle}></View>
-          </View> */}
         </View>
+
       </ScrollView>
     </SafeAreaView>
+
   );
 };
 

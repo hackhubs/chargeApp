@@ -13,27 +13,32 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { Details } from 'svg'
 
 function FinalCharge(props) {
   return (
     <ScrollView style={styles.cont}>
       <SafeAreaView style={styles.cont}>
         <View>
-          <ImageBackground
+          {/* <ImageBackground
             source={require("../images/finalCharge.png")}
             style={{ width: wp("100%"), height: hp("16%") }}
             resizeMode="cover"
+          > */}
+          <Details
+            width={wp("100%")}
+            height={hp("16%")}
+          />
+          <TouchableOpacity
+            onPress={() => console.log("back btn")}
+            style={styles.back}
           >
             <Image
+              style={{ width: wp("5%"), height: hp("3%") }}
               source={require("../images/Back.png")}
-              style={{
-                width: wp("5%"),
-                height: hp("3%"),
-                marginLeft: wp("3%"),
-                marginTop: wp("9%"),
-              }}
             />
-          </ImageBackground>
+          </TouchableOpacity>
+          {/* </ImageBackground> */}
         </View>
 
         <View flexDirection="row">
@@ -192,7 +197,7 @@ function FinalCharge(props) {
           </TouchableOpacity>
         </View>
       </SafeAreaView>
-    </ScrollView>
+    </ScrollView >
   );
 }
 
@@ -200,6 +205,11 @@ const styles = StyleSheet.create({
   cont: {
     flex: 1,
     backgroundColor: "white",
+  },
+  back: {
+    position: "absolute",
+    top: 35,
+    left: 15,
   },
   box1: {
     backgroundColor: "#03AD70",

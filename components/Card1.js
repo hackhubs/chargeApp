@@ -15,15 +15,20 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { Navigate, ChargeNow, ChargeBox } from 'svg';
 
 function Card1({ status, dis, loc }) {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row" }}>
-        <Image
+        {/* <Image
           source={require("../images/card-charge.png")}
           style={{ height: hp("8%"), width: wp("14%") }}
           resizeMode="contain"
+        /> */}
+        <ChargeBox
+          height={hp("8%")}
+          width={wp("14%")}
         />
 
         <View style={{ flexDirection: "column", marginLeft: 30 }}>
@@ -60,9 +65,9 @@ function Card1({ status, dis, loc }) {
             <TouchableOpacity
               style={{
                 backgroundColor: "#CAEAFF",
-                padding: wp("1.2%"),
+                padding: wp("1.5%"),
                 borderRadius: wp("10%") / 4,
-                marginLeft: wp("18%"),
+                marginLeft: wp("24%"),
                 marginTop: -wp("1%"),
               }}
             >
@@ -85,31 +90,51 @@ function Card1({ status, dis, loc }) {
       >
         {loc}
       </Text>
-      <View style={{ flexDirection: "row", margin: wp("2%") }}>
+      <View
+        style={{
+          flexDirection: "row",
+          margin: wp("2%"),
+          justifyContent: "space-evenly",
+          marginHorizontal: 40,
+          right: wp("12%"),
+        }}
+      >
         <TouchableOpacity activeOpacity={0.4}>
-          <Image
+          {/* <Image
             source={require("../images/navigate.png")}
             style={{
               height: hp("8%"),
               width: wp("20%"),
               borderRadius: hp("4%") / 4,
-              marginLeft: wp("7%"),
               marginTop: -wp("2%"),
             }}
             resizeMode="contain"
+          /> */}
+          <Navigate
+            height={hp("8%")}
+            width={wp("20%")}
+            borderRadius={hp("4%") / 4}
+            marginTop={-wp("2%")}
           />
         </TouchableOpacity>
         <TouchableOpacity activeOpacity={0.4} style={{ left: wp("3%") }}>
-          <Image
+          {/* <Image
             source={require("../images/charge_now.png")}
             style={{
               height: hp("8%"),
               width: wp("20%"),
               borderRadius: hp("4%") / 4,
-              marginLeft: wp("12%"),
+
               marginTop: -wp("2%"),
             }}
             resizeMode="contain"
+          /> */}
+          <ChargeNow
+            height={hp("8%")}
+            width={wp("20%")}
+            borderRadius={hp("4%") / 4}
+
+            marginTop={-wp("2%")}
           />
         </TouchableOpacity>
       </View>
@@ -125,22 +150,24 @@ const styles = StyleSheet.create({
     overflow: Platform.OS === "android" ? "hidden" : "",
     paddingLeft: wp("5%"),
     paddingTop: wp("3%"),
-    paddingBottom: wp("5%"),
-    marginRight: wp("2%"),
-    marginTop: hp("3%"),
-    height: hp("20%"),
-    width: wp("90%"),
+    padding: 25,
+    paddingBottom: wp("3%"),
+    marginRight: 35,
+    marginTop: hp("1%"),
+    marginBottom: hp("1%"),
+    height: hp("19.5%"),
+    width: wp("86%"),
     left: wp("5%"),
+
     backgroundColor: "white",
     shadowColor: "#000",
     shadowOffset: {
-      width: 1,
+      width: 0,
       height: 2,
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
-
-    elevation: 6,
+    elevation: 4,
   },
 });
 

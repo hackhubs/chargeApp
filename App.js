@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import HomePageScreen from "./screens/HomePageScreen";
@@ -28,11 +27,12 @@ import QRScreen from "./screens/QRScreen";
 import StationScreen from "./screens/StationScreen";
 import SessionScreen from "./screens/SessionScreen";
 
+
 export default function App() {
   // const Stack = createStackNavigator();
 
   return (
-    // <SessionScreen />
+    // <ChargingStatus />
     // <ChargingDetails />
     <HomePageScreen />
     // <QRScreen />

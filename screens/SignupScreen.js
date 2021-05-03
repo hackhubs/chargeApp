@@ -13,16 +13,18 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Send, Signup1 } from 'svg';
 
 function SignupScreen(props) {
   return (
     <KeyboardAwareScrollView style={{ flex: 1 }}>
       {/* // <SafeAreaView style={styles.container}> */}
       <View>
-        <Image
-          source={require("../images/signupOTP.png")}
-          resizeMode="contain"
-          style={{ width: wp("100%"), height: hp("40%"), marginTop: hp("10%") }}
+
+        <Signup1
+          width={wp("100%")}
+          height={hp("40%")}
+          marginTop={hp("10%")}
         />
         <Image
           source={require("../images/text.png")}
@@ -34,6 +36,7 @@ function SignupScreen(props) {
           }}
           resizeMode="contain"
         />
+
         <View
           flexDirection="row"
           style={{
@@ -75,16 +78,19 @@ function SignupScreen(props) {
             maxLength={10}
           />
         </View>
-        <TouchableOpacity activeOpacity={0.5}>
-          <Image
-            source={require("../images/otp1.png")}
-            resizeMode="contain"
-            style={{
-              height: hp("5%"),
-              width: wp("30%"),
-              marginLeft: wp("30%"),
-              marginTop: wp("6%"),
-            }}
+        <TouchableOpacity
+          style={{
+            // marginLeft: wp("30%"),
+            marginTop: wp("6%"),
+            alignItems: "center",
+
+          }}
+          activeOpacity={0.5}>
+
+          <Send
+            height={hp("5%")}
+            width={wp("30%")}
+
           />
         </TouchableOpacity>
       </View>

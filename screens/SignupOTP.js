@@ -14,12 +14,14 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Resend, Signup1 } from 'svg';
+
 
 function SignupScreen(props) {
   return (
     <KeyboardAwareScrollView style={{ flex: 1 }}>
       {/* <ScrollView style={styles.container}> */}
-      <Image
+      {/* <Image
         source={require("../images/signupOTP.png")}
         resizeMode="contain"
         style={{
@@ -27,6 +29,11 @@ function SignupScreen(props) {
           height: hp("40%"),
           marginTop: hp("10%"),
         }}
+      /> */}
+      <Signup1
+        width={wp("100%")}
+        height={hp("40%")}
+        marginTop={hp("10%")}
       />
       <Text style={styles.txt}>Enter your 4-digit code</Text>
       <Text style={styles.code}>Code</Text>
@@ -66,10 +73,16 @@ function SignupScreen(props) {
         </View>
       </View>
       <TouchableOpacity activeOpacity={0.5}>
-        <Image
+        {/* <Image
           source={require("../images/otp2.png")}
           resizeMode="contain"
           style={styles.btn}
+        /> */}
+        <Resend
+          height={hp("5%")}
+          width={wp("40%")}
+          marginLeft={wp("5%")}
+          marginTop={wp("8%")}
         />
       </TouchableOpacity>
       {/* </ScrollView> */}
@@ -106,12 +119,12 @@ const styles = StyleSheet.create({
     borderRadius: wp("10%") / 6,
     borderColor: "#787878",
   },
-  btn: {
-    height: hp("5%"),
-    width: wp("40%"),
-    marginLeft: wp("5%"),
-    marginTop: wp("8%"),
-  },
+  // btn: {
+  //   height: hp("5%"),
+  //   width: wp("40%"),
+  //   marginLeft: wp("5%"),
+  //   marginTop: wp("8%"),
+  // },
 });
 
 export default SignupScreen;

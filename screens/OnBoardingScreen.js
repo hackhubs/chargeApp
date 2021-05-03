@@ -5,6 +5,8 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { Screen1, NextBtn, Screen2, Screen3, Screen4 }
+  from '../images/svg';
 
 const dots = ({ selected }) => {
   let backgroundColor;
@@ -27,7 +29,13 @@ const dots = ({ selected }) => {
 
 const Next = ({ ...props }) => (
   <TouchableHighlight style={styles.next} {...props}>
-    <Image source={require("../images/next.png")} style={styles.nextImage} />
+
+    <NextBtn
+      width={wp("85%")}
+      height={hp("7%")}
+      marginTop={-wp("10%")}
+      borderRadius={wp("60%") / 20}
+    />
   </TouchableHighlight>
 );
 function OnBoardingScreen({ navigation }) {
@@ -50,9 +58,11 @@ function OnBoardingScreen({ navigation }) {
           {
             backgroundColor: "#fff",
             image: (
-              <Image
-                source={require("../images/screen1.png")}
-                style={styles.image}
+
+              <Screen1
+                width={wp("100%")}
+                height={hp("50%")}
+                marginBottom={140}
               />
             ),
             title: "CHECK PRICES",
@@ -61,9 +71,11 @@ function OnBoardingScreen({ navigation }) {
           {
             backgroundColor: "#fff",
             image: (
-              <Image
-                source={require("../images/screen2.png")}
-                style={styles.image}
+
+              <Screen2
+                width={wp("100%")}
+                height={hp("50%")}
+                marginBottom={140}
               />
             ),
             title: "PRE-BOOK STATIONS",
@@ -71,9 +83,11 @@ function OnBoardingScreen({ navigation }) {
           {
             backgroundColor: "#fff",
             image: (
-              <Image
-                source={require("../images/screen3.png")}
-                style={styles.image}
+
+              <Screen3
+                width={wp("100%")}
+                height={hp("50%")}
+                marginBottom={140}
               />
             ),
             title: "CONTROL & MONITOR",
@@ -81,9 +95,11 @@ function OnBoardingScreen({ navigation }) {
           {
             backgroundColor: "#fff",
             image: (
-              <Image
-                source={require("../images/screen4.png")}
-                style={styles.image}
+
+              <Screen4
+                width={wp("100%")}
+                height={hp("50%")}
+                marginBottom={140}
               />
             ),
             title: "JOIN OUR NETWORK",
@@ -104,12 +120,12 @@ const styles = StyleSheet.create({
     width: wp("80%"),
     marginRight: wp("12%"),
   },
-  nextImage: {
-    width: wp("85%"),
-    height: hp("7%"),
-    marginTop: -wp("10%"),
-    borderRadius: wp("60%") / 20,
-  },
+  // nextImage: {
+  //   width: wp("85%"),
+  //   height: hp("7%"),
+  //   marginTop: -wp("10%"),
+  //   borderRadius: wp("60%") / 20,
+  // },
   image: {
     width: wp("100%"),
     height: hp("50%"),

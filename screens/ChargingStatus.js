@@ -14,40 +14,31 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { StatusHeader } from 'svg';
 
 const ChargingStatus = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.cont}>
-      <View>
-        <ImageBackground
+
+      {/* <ImageBackground
           source={require("../images/chargeStatus.png")}
           style={{ width: "100%", height: hp("15%") }}
           resizeMode="cover"
+        > */}
+      <View>
+        <StatusHeader
+          width={"100%"}
+          height={hp("15%")}
+        />
+        <TouchableOpacity
+          onPress={() => console.log("back btn")}
+          style={styles.back}
         >
-          <View
-            style={{
-              position: "absolute",
-              top: 30,
-              left: 12,
-              right: 0,
-              bottom: 0,
-              width: wp("10%"),
-            }}
-          >
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() => console.log("status")}
-            >
-              <Image
-                source={require("../images/Back.png")}
-                style={{
-                  height: hp("3%"),
-                  width: wp("10%"),
-                }}
-              />
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
+          <Image
+            style={{ width: wp("5%"), height: hp("3%") }}
+            source={require("../images/Back.png")}
+          />
+        </TouchableOpacity>
       </View>
       <View style={{ flexDirection: "row", marginBottom: 30 }}>
         <View
@@ -108,7 +99,7 @@ const ChargingStatus = ({ navigation }) => {
             resizeMode="cover"
           />
         </View> */}
-    </SafeAreaView>
+    </SafeAreaView >
   );
 };
 export default ChargingStatus;
@@ -122,6 +113,11 @@ const styles = StyleSheet.create({
     fontSize: wp("5%"),
     fontFamily: "SF-Pro-Display-Regular",
     color: "#031925",
+  },
+  back: {
+    position: "absolute",
+    top: 35,
+    left: 15,
   },
   subText: {
     fontSize: wp("5.6%"),

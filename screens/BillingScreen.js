@@ -13,33 +13,39 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { Receipt } from 'svg';
 
 function BillingScreen(props) {
   return (
     <ScrollView style={styles.cont}>
       <SafeAreaView style={styles.cont}>
         <View flexDirection="column">
-          <ImageBackground
+          {/* <ImageBackground
             source={require("../images/receipt.png")}
             style={{ width: wp("100%"), height: hp("16%") }}
             resizeMode="cover"
+          > */}
+          <Receipt
+            width={wp("100%")} height={hp("16%")}
+          />
+          <TouchableOpacity
+            onPress={() => console.log("receipt back btn")}
+            style={styles.back}
           >
-            <TouchableOpacity
-              onPress={() => console.log("receipt back btn")}
-              style={styles.back}
-            >
-              <Image
-                style={{ width: wp("5%"), height: hp("3%") }}
-                source={require("../images/Back.png")}
-              />
-            </TouchableOpacity>
-          </ImageBackground>
+            <Image
+              style={{ width: wp("5%"), height: hp("3%") }}
+              source={require("../images/Back.png")}
+            />
+          </TouchableOpacity>
+
+          {/* </ImageBackground> */}
           <View style={{ marginTop: -wp("5%") }}>
             <ImageBackground
               source={require("../images/car.png")}
               style={{ width: wp("100%"), height: hp("35%") }}
               resizeMode="cover"
             >
+
               <Text style={styles.content1}>14/03/21, 7:45 AM</Text>
               <Text style={styles.content2}>
                 Rohini Community Charging Station, B-5/30, New Delhi - 110034
@@ -106,7 +112,7 @@ function BillingScreen(props) {
           </View>
         </View>
       </SafeAreaView>
-    </ScrollView>
+    </ScrollView >
   );
 }
 
@@ -118,7 +124,7 @@ const styles = StyleSheet.create({
   back: {
     position: "absolute",
     top: 35,
-    left: 6,
+    left: 15,
   },
   content1: {
     fontSize: wp("5%"),

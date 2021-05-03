@@ -14,66 +14,62 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import LinearGradient from "react-native-linear-gradient";
-// import RadioButton from "../components/RadioButton";
-
-// const PROP = [
-//   {
-//     key: "1",
-//     text: "Paytm",
-//   },
-//   {
-//     key: "2",
-//     text: "Google Pay",
-//   },
-//   {
-//     key: "3",
-//     text: "Net Banking",
-//   },
-//   {
-//     key: "4",
-//     text: "Card",
-//   },
-// ];
+import { Cost, EnergyConsumed, Time, ChargeHeader, PayBtn } from 'svg'
+import { BoxShadow } from 'react-native-shadow'
 
 function ChargingDetails({ navigation }) {
+
+  const shadowOpt = {
+    width: wp("100%"),
+    height: hp("18%"),
+    color: "#000000",
+    border: 10,
+    // radius: 6,
+    opacity: 0.2,
+    // x: 1,
+    y: 62,
+
+  }
+
   return (
     <ScrollView style={styles.cont}>
       <SafeAreaView style={styles.cont}>
         <View>
-          <ImageBackground
+          {/* <ImageBackground
             source={require("../images/chargeHeader.png")}
             style={{ width: wp("100%"), height: hp("16%") }}
             resizeMode="cover"
+          > */}
+          <ChargeHeader
+            width={wp("100%")}
+            height={hp("16%")}
+          />
+
+          <TouchableOpacity
+            onPress={() => console.log("back btn")}
+            style={styles.back}
           >
-            <View flexDirection="row">
-              <TouchableOpacity onPress={() => console.log("btn ")}>
-                <Image
-                  source={require("../images/Back.png")}
-                  style={{
-                    width: wp("7%"),
-                    height: hp("4%"),
-                    marginLeft: wp("6%"),
-                    marginTop: wp("8%"),
-                  }}
-                />
-              </TouchableOpacity>
-              <Text style={styles.txt}>Charging Details</Text>
-            </View>
-          </ImageBackground>
+            <Image
+              style={{ width: wp("5%"), height: hp("3%") }}
+              source={require("../images/Back.png")}
+            />
+          </TouchableOpacity>
+
+
+          {/* </ImageBackground> */}
         </View>
 
         <View flexDirection="column">
           <LinearGradient colors={["#4B5358", "#545B60"]} style={styles.box3}>
-            <View flexDirection="row">
+            <View flexDirection="row" style={{ justifyContent: "center", alignItems: "center" }}>
               <View flexDirection="row" style={{ marginRight: wp("4%") }}>
-                <Image
-                  source={require("../images/time.png")}
-                  style={{
-                    height: hp("6%"),
-                    width: wp("11%"),
-                    margin: wp("3%"),
-                    borderRadius: wp("10%") / 8,
-                  }}
+
+                <Time
+                  height={hp("6%")}
+                  width={wp("15%")}
+                  margin={wp("1%")}
+                  borderRadius={wp("10%") / 8}
+
                 />
                 <View>
                   <Text
@@ -100,11 +96,11 @@ function ChargingDetails({ navigation }) {
               <View style={{ marginRight: wp("2%") }}>
                 <Text
                   style={{
-                    fontSize: wp("6%"),
+                    fontSize: wp("5.6%"),
                     color: "white",
                     fontFamily: "SF-Pro-Display-Semibold",
                     padding: wp("1%"),
-                    marginTop: wp("5%"),
+                    marginTop: wp("6%"),
                     marginLeft: wp("6%"),
                   }}
                 >
@@ -116,17 +112,20 @@ function ChargingDetails({ navigation }) {
 
           <LinearGradient colors={["#03AD70", "#059863"]} style={styles.box1}>
             <View flexDirection="column">
-              <View flexDirection="row">
-                <Image
-                  source={require("../images/energy-icon.png")}
-                  style={{
-                    height: hp("6%"),
-                    width: wp("11%"),
-                    margin: wp("3%"),
-                    borderRadius: wp("10%") / 8,
-                  }}
+              <View flexDirection="row" style={{
+                justifyContent: "center",
+                alignItems: "center",
+
+              }}>
+
+                <EnergyConsumed
+                  height={hp("6%")}
+                  width={wp("15%")}
+                  margin={wp("1%")}
+                  borderRadius={wp("10%") / 8}
+
                 />
-                <View style={{ marginRight: wp("4%") }}>
+                <View style={{ marginRight: wp("4%"), }}>
                   <Text
                     style={{
                       fontFamily: "SF-Pro-Display-Medium",
@@ -150,15 +149,16 @@ function ChargingDetails({ navigation }) {
                 <View style={{ marginRight: wp("2%") }}>
                   <Text
                     style={{
-                      fontSize: wp("6%"),
+                      fontSize: wp("5.6%"),
                       color: "white",
                       fontFamily: "SF-Pro-Display-Semibold",
                       padding: wp("1%"),
-                      marginTop: wp("5%"),
-                      marginLeft: wp("6%"),
+                      marginTop: wp("6%"),
+                      marginLeft: wp("2%"),
+
                     }}
                   >
-                    7.4 kWh
+                    17.40 kWh
                   </Text>
                 </View>
               </View>
@@ -166,16 +166,17 @@ function ChargingDetails({ navigation }) {
           </LinearGradient>
 
           <LinearGradient colors={["#2D9CDB", "#2C93CE"]} style={styles.box2}>
-            <View flexDirection="row">
-              <View flexDirection="row" style={{ marginRight: wp("4%") }}>
-                <Image
-                  source={require("../images/cost.png")}
-                  style={{
-                    height: hp("6%"),
-                    width: wp("11%"),
-                    margin: wp("3%"),
-                    borderRadius: wp("10%") / 8,
-                  }}
+            <View flexDirection="row"
+              style={{ justifyContent: "center", alignItems: "center" }}>
+              <View flexDirection="row"
+                style={{ marginRight: wp("4%") }}>
+
+                <Cost
+                  height={hp("6%")}
+                  width={wp("15%")}
+                  margin={wp("1%")}
+                  marginLeft={wp("10%")}
+                  borderRadius={wp("10%") / 8}
                 />
                 <View>
                   <Text
@@ -202,11 +203,11 @@ function ChargingDetails({ navigation }) {
               <View style={{ marginRight: wp("2%") }}>
                 <Text
                   style={{
-                    fontSize: wp("6%"),
+                    fontSize: wp("5.6%"),
                     color: "white",
                     fontFamily: "SF-Pro-Display-Semibold",
                     padding: wp("1%"),
-                    marginTop: wp("5%"),
+                    marginTop: wp("6%"),
                     marginLeft: wp("5%"),
                   }}
                 >
@@ -216,37 +217,38 @@ function ChargingDetails({ navigation }) {
             </View>
           </LinearGradient>
         </View>
-
-        <View
-          flexDirection="row"
-          style={{
-            alignItems: "center",
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 1,
-            },
-            shadowOpacity: 0.18,
-            shadowRadius: 1.0,
-            elevation: 3,
-            height: hp("10%"),
-            marginTop: wp("14.8%"),
-          }}
-        >
-          <Text
+        <BoxShadow setting={shadowOpt}>
+          <View
+            flexDirection="row"
             style={{
-              fontFamily: "SF-Pro-Display-Semibold",
-              marginLeft: wp("5%"),
-              fontSize: wp("6%"),
-              marginTop: wp("2%"),
-              color: "black",
+              alignItems: "center",
+              // shadowColor: "#000",
+              // shadowOffset: {
+              //   width: 0,
+              //   height: 1,
+              // },
+              // shadowOpacity: 0.18,
+              // shadowRadius: 1.0,
+              // elevation: 3,
+              height: hp("10%"),
+              marginTop: wp("14.8%"),
+              backgroundColor: "white"
             }}
           >
-            {"\u20B9"} 148.45
+            <Text
+              style={{
+                fontFamily: "SF-Pro-Display-Semibold",
+                marginLeft: wp("5%"),
+                fontSize: wp("6%"),
+                marginTop: wp("2%"),
+                color: "black",
+              }}
+            >
+              {"\u20B9"} 148.45
           </Text>
 
-          <TouchableOpacity onPress={() => navigation.navigate("AppBottom")}>
-            <Image
+            <TouchableOpacity onPress={() => navigation.navigate("AppBottom")}>
+              {/* <Image
               source={require("../images/payNow.png")}
               style={{
                 height: hp("4.6%"),
@@ -256,11 +258,23 @@ function ChargingDetails({ navigation }) {
                 borderRadius: wp("8%") / 4,
                 marginBottom: wp("3%"),
               }}
-            />
-          </TouchableOpacity>
-        </View>
+            /> */}
+
+
+              <PayBtn
+                height={hp("4.6%")}
+                width={wp("50%")}
+                marginLeft={wp("12%")}
+                marginTop={wp("5%")}
+                borderRadius={wp("8%") / 4}
+                marginBottom={wp("3%")}
+              />
+            </TouchableOpacity>
+
+          </View>
+        </BoxShadow>
       </SafeAreaView>
-    </ScrollView>
+    </ScrollView >
   );
 }
 
@@ -268,6 +282,11 @@ const styles = StyleSheet.create({
   cont: {
     flex: 1,
     backgroundColor: "white",
+  },
+  back: {
+    position: "absolute",
+    top: 35,
+    left: 15,
   },
   txt: {
     color: "white",
