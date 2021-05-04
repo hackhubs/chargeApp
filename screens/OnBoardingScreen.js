@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Image, View, TouchableHighlight } from "react-native";
+import { StyleSheet, Image, View, TouchableOpacity } from "react-native";
 import Onboarding from "react-native-onboarding-swiper";
 import {
   heightPercentageToDP as hp,
@@ -28,7 +28,7 @@ const dots = ({ selected }) => {
 };
 
 const Next = ({ ...props }) => (
-  <TouchableHighlight style={styles.next} {...props}>
+  <TouchableOpacity style={styles.next} {...props}>
 
     <NextBtn
       width={wp("85%")}
@@ -36,7 +36,7 @@ const Next = ({ ...props }) => (
       marginTop={-wp("10%")}
       borderRadius={wp("60%") / 20}
     />
-  </TouchableHighlight>
+  </TouchableOpacity>
 );
 function OnBoardingScreen({ navigation }) {
   return (
@@ -53,7 +53,7 @@ function OnBoardingScreen({ navigation }) {
           color: "#012E41",
           marginTop: wp("2%"),
         }}
-        onDone={() => navigation.replace("LoginPage")}
+        // onDone={() => navigation.replace("LoginPage")}
         pages={[
           {
             backgroundColor: "#fff",
@@ -66,6 +66,7 @@ function OnBoardingScreen({ navigation }) {
               />
             ),
             title: "CHECK PRICES",
+            subtitle: "1",
             containerStyles: { paddingBottom: 30 },
           },
           {
@@ -79,6 +80,7 @@ function OnBoardingScreen({ navigation }) {
               />
             ),
             title: "PRE-BOOK STATIONS",
+            subtitle: "1",
           },
           {
             backgroundColor: "#fff",
@@ -91,6 +93,7 @@ function OnBoardingScreen({ navigation }) {
               />
             ),
             title: "CONTROL & MONITOR",
+            subtitle: "1",
           },
           {
             backgroundColor: "#fff",
@@ -103,6 +106,7 @@ function OnBoardingScreen({ navigation }) {
               />
             ),
             title: "JOIN OUR NETWORK",
+            subtitle: "1"
           },
         ]}
       />

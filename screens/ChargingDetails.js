@@ -247,7 +247,14 @@ function ChargingDetails({ navigation }) {
               {"\u20B9"} 148.45
           </Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate("AppBottom")}>
+            <TouchableOpacity style={{
+              marginLeft: wp("12%"),
+              marginTop: wp("5%"),
+              borderRadius: wp("8%") / 4,
+
+              marginBottom: wp("3%")
+            }}
+              onPress={() => console.log("pay now")} >
               {/* <Image
               source={require("../images/payNow.png")}
               style={{
@@ -261,14 +268,15 @@ function ChargingDetails({ navigation }) {
             /> */}
 
 
-              <PayBtn
+              < PayBtn
                 height={hp("4.6%")}
                 width={wp("50%")}
-                marginLeft={wp("12%")}
-                marginTop={wp("5%")}
-                borderRadius={wp("8%") / 4}
-                marginBottom={wp("3%")}
+              // marginLeft={wp("12%")}
+              // marginTop={wp("5%")}
+              // borderRadius={wp("8%") / 4}
+              // marginBottom={wp("3%")}
               />
+
             </TouchableOpacity>
 
           </View>

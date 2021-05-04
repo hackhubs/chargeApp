@@ -32,9 +32,10 @@ export default function App() {
   // const Stack = createStackNavigator();
 
   return (
+    <OnBoardingScreen />
     // <ChargingStatus />
     // <ChargingDetails />
-    <HomePageScreen />
+    // <HomePageScreen />
     // <QRScreen />
     // <RegisterHost />
     // <NavigationContainer>

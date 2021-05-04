@@ -13,7 +13,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import { Details } from 'svg'
+import { Details, Car } from 'svg'
 
 function FinalCharge(props) {
   return (
