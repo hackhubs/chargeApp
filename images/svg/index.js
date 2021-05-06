@@ -35,4 +35,7 @@ export { default as Twitter } from './twitter.svg'
 export { default as Instagram } from './insta.svg'
 export { default as LinkedIn } from './linkedin.svg'
 export { default as Web } from './web.svg'
-
+export { default as EditHeader } from './editHeader.svg'
+// export { default as Avatar } from './avatar.svg'
+export { default as Pencil } from './pencil.svg'
+export { default as SaveBtn } from './saveBtn.svg'

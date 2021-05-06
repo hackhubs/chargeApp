@@ -32,7 +32,7 @@ export default function App() {
   // const Stack = createStackNavigator();
 
   return (
-    <ProfileScreen />
+    <EditProfile />
     // <ChargingStatus />
     // <ChargingDetails />
     // <HomePageScreen />
