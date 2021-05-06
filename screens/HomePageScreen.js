@@ -28,15 +28,15 @@ import { BoxShadow } from 'react-native-shadow'
 const HomePageScreen = ({ navigation }) => {
 
   const shadowOpt = {
-    width: wp("65%"),
-    height: hp("6.3%"),
+    width: wp("60%"),
+    height: hp("5%"),
     color: "#069DFF",
     border: 12,
     // radius: 6,
     opacity: 0.2,
-    x: 6,
-    y: 20,
-    style: { marginBottom: hp("5%") }
+    x: 12,
+    y: 24,
+    style: { marginBottom: hp("8%") }
 
 
   }
